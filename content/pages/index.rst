@@ -17,7 +17,7 @@ industry in India.
 
 I am currently located in Bangalore, India and work as a Tech Lead/Manager for
 the aerial imagery team at Google. My day job involves managing a large GIS
-operations team and also writing Python code for processing large amounts of
+operations team and also writing Python code for processing vast amounts of
 satellite and aerial imagery.
 
 *Disclaimer: The views and opinions expressed here are mine alone and do not
