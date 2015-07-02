@@ -16,9 +16,7 @@ around `QGIS </qgis>`_ and `OpenDataKit </opendatakit>`_. I also maintain some
 industry in India.
 
 I am currently located in Bangalore, India and work as a Tech Lead/Manager for
-the aerial imagery team at Google. My day job involves managing a large GIS
-operations team and also writing Python code for processing vast amounts of
-satellite and aerial imagery.
+the aerial imagery team at Google.
 
 *Disclaimer: The views and opinions expressed here are mine alone and do not
 represent the views of my employer.*
