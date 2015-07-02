@@ -1,7 +1,10 @@
+OpenDataKit (ODK)
+#################
+
 :slug: opendatakit
 
-OpenDataKit Workshops
----------------------
+Trainings
+---------
 
 Mobile Field Data Collection using OpenDataKit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

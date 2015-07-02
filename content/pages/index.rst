@@ -5,10 +5,6 @@ Ujaval Gandhi
 :save_as: index.html
 :slug: index.html
 
-.. image:: /images/profile.jpg
-   :alt: profile picture
-   :align: right
-
 This is my personal website describing some of my work. I am passionate about
 teaching and open source software. My work with the community has been mostly
 around `QGIS </qgis>`_ and `OpenDataKit </opendatakit>`_. I also maintain some

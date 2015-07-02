@@ -1,13 +1,16 @@
+QGIS
+####
+
 :slug: qgis
 
-QGIS Tutorials and Tips
------------------------
+Tutorials and Tips
+------------------
 Open-source and liberally licensed tutorials and tips for QGIS. Widely used to
 across the globe to learn and teach QGIS. `http://www.qgistutorials.com
 <http://www.qgistutorials.com>`_
 
-QGIS Workshops
---------------
+Trainings
+---------
 
 Becoming a QGIS Power User
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
