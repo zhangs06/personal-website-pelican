@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Spatial Thoughts</title><link href="http://www.spatialthoughts.com/" rel="alternate"></link><link href="http://www.spatialthoughts.com/feeds/gis.atom.xml" rel="self"></link><id>http://www.spatialthoughts.com/</id><updated>2013-07-06T00:00:00+05:30</updated><entry><title>Calculate distance between a pair of lat/lon coordinates</title><link href="http://www.spatialthoughts.com/blog/gis/calculate-distance-spreadsheet/" rel="alternate"></link><updated>2013-07-06T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2013-07-06:blog/gis/calculate-distance-spreadsheet/</id><summary type="html">&lt;p&gt;I recently had a need to calculate distance between a large number of
+latitude/longitude coordinate pairs. There are many options available if you
+want to import these in a GIS and run analysis. But there is a simpler and much
+more accesible way if you aren't doing very high accuracy calculations.&lt;/p&gt;
+&lt;p&gt;I decided to write a simple &lt;em&gt;Macro&lt;/em&gt; or &lt;em&gt;AppScript&lt;/em&gt; for Google Spreadsheets,
+which uses the well-known &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Haversine_formula"&gt;Haversine formula&lt;/a&gt; to calculate distance
+between 2 coordinates. Once the script is saved, the user of the spreadsheet
+can use the function 'distance()' just the way one uses any of the built-in
+functions.&lt;/p&gt;
+&lt;img alt="forumla to calculate distance." src="/images/calculate-distance-spreadsheet.png" /&gt;
+&lt;p&gt;You can give it a try. Just open &lt;a class="reference external" href="https://docs.google.com/spreadsheet/ccc?key=0AkXc7QoGul60dEc5Q01pTGNfa3N5YW5EWDNkOG9Ec3c&amp;amp;newcopy=true"&gt;this spreadsheet&lt;/a&gt;,
+make a copy it and play with it as you like.&lt;/p&gt;
+</summary></entry></feed>
