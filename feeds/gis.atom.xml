@@ -11,4 +11,60 @@ functions.&lt;/p&gt;
 &lt;img alt="forumla to calculate distance." src="/images/calculate-distance-spreadsheet.png" /&gt;
 &lt;p&gt;You can give it a try. Just open &lt;a class="reference external" href="https://docs.google.com/spreadsheet/ccc?key=0AkXc7QoGul60dEc5Q01pTGNfa3N5YW5EWDNkOG9Ec3c&amp;amp;newcopy=true"&gt;this spreadsheet&lt;/a&gt;,
 make a copy it and play with it as you like.&lt;/p&gt;
+</summary></entry><entry><title>GIS Project Ideas for Thesis/ Dissertation/ Internship</title><link href="http://www.spatialthoughts.com/blog/gis/gis-project-ideas/" rel="alternate"></link><updated>2010-10-25T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2010-10-25:blog/gis/gis-project-ideas/</id><summary type="html">&lt;p&gt;Many students have asked me for ideas on what topic they should choose for
+their Thesis. I have debated this myself when I was a student. The ideal topic
+would be the one that allows you to dive into a topic deeply as well as give
+you some practical skills that will help you landing a job. Here are some
+pointer that may help you make that decision.&lt;/p&gt;
+&lt;div class="section" id="create-a-mashup"&gt;
+&lt;h2&gt;Create a Mashup&lt;/h2&gt;
+&lt;p&gt;A mashup is created by merging 2 or more sources of location data. There are
+variety of free data available for you to experiment with and create unique
+applications. Map mashups can be created using free tools such as Google Maps,
+OpenLayers, GeoCommons Maker!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="develop-a-plug-in-for-an-open-source-gis"&gt;
+&lt;h2&gt;Develop a plug-in for an open-source GIS&lt;/h2&gt;
+&lt;p&gt;There is always a need to implement new features for open-source GIS software
+like QGIS or MapWindowGIS. You can implement a cool feature or customize the
+software for a particular domain. You will not only gain valuable experience
+developing among the best programmers but also this will be an impressive
+addition to your resume.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="work-with-an-ngo"&gt;
+&lt;h2&gt;Work with an NGO&lt;/h2&gt;
+&lt;p&gt;Most often students struggle to find good quality free GIS data which can be
+used in interesting ways. Contact local NGOs to see if you can help them
+analyze their location-specific data. Most NGOs collect some form of loation
+data and your GIS skills can come in handy to them. The result of such a
+project could be a unique GIS project that uses real on-the-ground data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="build-a-campus-gis"&gt;
+&lt;h2&gt;Build a Campus GIS&lt;/h2&gt;
+&lt;p&gt;If you are at a university, a good project would be to put together a
+web-accessible campus information system. You could model the campus buildings
+in 3D, use satellite imagery via an API and overlay data about your campus.
+Such a system could be attractive to the administrator as well.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="develop-a-vehicle-tracking-system"&gt;
+&lt;h2&gt;Develop a vehicle tracking system&lt;/h2&gt;
+&lt;p&gt;You can buy a cheap GPS receiver and implement a vehicle tracking system. This
+will get you exposed to GPS/GSM protocols and get you hands-on knowledge that
+many companies worldwide are looking for. Add your own twist to the traditional
+tracking system by specializing it for walking directions, bus travel, toursut
+sightseeing, navigating the blind etc.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="do-some-green-research"&gt;
+&lt;h2&gt;Do some 'Green' research&lt;/h2&gt;
+&lt;p&gt;Everyone is turning to green and sustainable technologies. As an intern or a
+researcher, you could use your analytical skills to further the knowledge in
+this area. Wind power, solar energy, climate change etc. are great topics for
+GIS and Remote Sensing research.Analysing wind data to find best locations for
+wind turbines or using remote sensing images to detect climate change are some
+examples of projects. If you are a PhD student, you'll find these topics
+complex and challenging enough for yor dissertation and you'll stand to recieve
+grants or funds from governments as well.&lt;/p&gt;
+&lt;p&gt;Do you have more ideas to share? What project are you thinking of? Please leave
+a comment and help the GIS student community!&lt;/p&gt;
+&lt;/div&gt;
 </summary></entry></feed>
