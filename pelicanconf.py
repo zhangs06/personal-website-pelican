@@ -70,8 +70,9 @@ SOCIAL = (('twitter', 'http://twitter.com/spatialthoughts'),
 
 DEFAULT_PAGINATION = False
 
-STATIC_PATHS = ['images', 'extra/CNAME']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+STATIC_PATHS = ['images', 'extra/CNAME', 'extra/404.html']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
+        'extra/404.html': {'path': '404.html' }}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
