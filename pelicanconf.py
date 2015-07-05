@@ -41,9 +41,7 @@ ARTICLE_SAVE_AS = 'blog/{category}/{slug}/index.html'
 CATEGORY_SAVE_AS = 'blog/{slug}/index.html'
 CATEGORY_URL = 'blog/{slug}/'
 
-ARCHIVES_SAVE_AS = 'blog/archives/index.html'
-#FEED_ATOM = 'blog/feeds/'
-#FEED_RSS = 'blog/feeds/'
+ARCHIVES_SAVE_AS = 'archives.html'
 
 TAG_SAVE_AS = False
 TAG_URL = False
@@ -84,4 +82,4 @@ SITEMAP = {
             'indexes': 'daily',
             'pages': 'monthly'
             }
-        }
+       }
