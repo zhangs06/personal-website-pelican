@@ -1,5 +1,5 @@
-Note from Carotonama 2012
-#########################
+Notes from Carotonama - 2012
+############################
 
 :slug: cartonama-2012
 
