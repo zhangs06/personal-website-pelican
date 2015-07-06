@@ -105,6 +105,54 @@ is mature but there are no mature solutions based on these that the
 governments can adopt without much risk.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+</summary></entry><entry><title>Note from Carotonama 2012</title><link href="http://www.spatialthoughts.com/blog/gis/cartonama-2012/" rel="alternate"></link><updated>2012-10-28T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2012-10-28:blog/gis/cartonama-2012/</id><summary type="html">&lt;p&gt;I was at #cartonama conference in Bangalore on 23rd September. It was wonderful
+to be among geogeeks and see the energy and enthusiasm. Got to see some great
+demos and LBS apps from startups in India. Here's a run down from my notes and
+bookmarks.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Traffic cams in Bangalore: This was probably the coolest demo for me. Love
+the simplicity and usefulness. Just open this URL in your smartphone browser
+and get real-time feed from the traffic-cam neareast to you from BTIS.
+&lt;a class="reference external" href="http://hackday.freecrow.org/trafficam"&gt;http://hackday.freecrow.org/trafficam&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Thru the Gall: A Layar-based android app to solve the last-mile direcction
+problem in India. Bubbles guide you through the narrow-lanes (galli).
+&lt;a class="reference external" href="http://www.layar.com/layers/galli/"&gt;http://www.layar.com/layers/galli/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Padma: Search and Browse Indian documentaries through locations of the clips
+in the documentaries &lt;a class="reference external" href="http://pad.ma/map"&gt;http://pad.ma/map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DelightCircle: LBS app to discover offers and discounts near you. Surprised
+at the coverage and partnerships they are able to genrate in the short time.
+Powered by MongoDB at the backend.http://delightcircle.com/&lt;/li&gt;
+&lt;li&gt;Commonfloor.com: Google Maps API app for property search. Nicely done and
+simple UI and fast lad times. The team talked about challenges and techniques
+they use to de-dup the listings and pin the individual listings to the
+apartment block. &lt;a class="reference external" href="http://www.commonfloor.com/apartments-for-sale/maps/"&gt;http://www.commonfloor.com/apartments-for-sale/maps/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Yahoo: I had forgotten about yahoo as a geo player. But from the talk the
+team seems pretty excited about their geo APIs. The Geo APIs are used by many
+yahoo properties internally and available to developers too. The API to
+extract locations from free-form-text was cool. YQL is a SQL-like query
+interface for their API. &lt;a class="reference external" href="http://developer.yahoo.com/yql/console/"&gt;http://developer.yahoo.com/yql/console/&lt;/a&gt;,  APIS at
+&lt;a class="reference external" href="http://developer.yahoo.com/geo/"&gt;http://developer.yahoo.com/geo/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;NextDrop: Very interesting idea. Most places in India do not have a regular
+water supply and people's day revolves around when they are able to collecct
+water. They have built a system that alerts subscribers by sms when they can
+expect water based on the information from the utility company. Subscribers
+pay Rs.10/month to get this data. Their challenge revoled around locating
+their customers on a map - both for billing as well as determining which
+pipeline will supply them water. &lt;a class="reference external" href="http://nextdrop.org"&gt;http://nextdrop.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lokasi: Simple android app that allows you to share your current location by
+sms. Reverse-geocoding + location identifier. &lt;a class="reference external" href="http://www.onze.in/"&gt;http://www.onze.in/&lt;/a&gt;  .
+collected POIs + street geometry for entire bangalore is about 6 months with
+a 10-person team.&lt;/li&gt;
+&lt;li&gt;Brief history of map making: Fun talk with lot of pretty and interesting
+maps.  No geo conference is complete without a passionate discussion on
+projections :)
+&lt;a class="reference external" href="http://www.slideshare.net/sumandro/sumandromapping-thecity27032012-12203410"&gt;http://www.slideshare.net/sumandro/sumandromapping-thecity27032012-12203410&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Chalo BEST: Bus route planner for Mumbai using OpenTripPlanner and GTFS feed
+from BEST. &lt;a class="reference external" href="http://trip.chalobest.in/"&gt;http://trip.chalobest.in/&lt;/a&gt; . Challenges in converting messy
+spreadsheet data from the agengy in to GTFS feed.&lt;/li&gt;
+&lt;li&gt;Geohash: overview of the geohash system. Lots of discussion around what
+geohash is good for. &lt;a class="reference external" href="http://geohash.org/"&gt;http://geohash.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </summary></entry><entry><title>GIS Project Ideas for Thesis/ Dissertation/ Internship</title><link href="http://www.spatialthoughts.com/blog/gis/gis-project-ideas/" rel="alternate"></link><updated>2010-10-25T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2010-10-25:blog/gis/gis-project-ideas/</id><summary type="html">&lt;p&gt;Many students have asked me for ideas on what topic they should choose for
 their Thesis. I have debated this myself when I was a student. The ideal topic
 would be the one that allows you to dive into a topic deeply as well as give
