@@ -22,7 +22,8 @@ OpenDataKit at APD-India
 ------------------------
 
 Active volunteer at `Association of People with Disability - India
-<http://www.apd-india.org/>`_. Deployed a ODK-based solution to move their
+<http://www.apd-india.org/>`_. Deployed a `ODK-based solution
+</blog/odk/opendatakit-for-apd>`_ to move their
 field registrations from paper to Android phones.
 
 OpenDataKit(ODK) Post Receiver
