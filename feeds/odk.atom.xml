@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Spatial Thoughts</title><link href="http://www.spatialthoughts.com/" rel="alternate"></link><link href="http://www.spatialthoughts.com/feeds/odk.atom.xml" rel="self"></link><id>http://www.spatialthoughts.com/</id><updated>2014-04-29T00:00:00+05:30</updated><entry><title>Implementing a Field Data collection app for APD</title><link href="http://www.spatialthoughts.com/blog/odk/opendatakit-for-apd/" rel="alternate"></link><updated>2014-04-29T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2014-04-29:blog/odk/opendatakit-for-apd/</id><summary type="html">&lt;p&gt;The &lt;a class="reference external" href="http://www.apd-india.org/"&gt;Association for People with Disability (APD)&lt;/a&gt;
+is a non-profit organization based out of Bangalore, India. Their mission is to
+reach out and rehabilitate people with disability from the under privileged
+segment. Over the past year, I along with my colleagues have been volunteering
+with them to develop a system that can help improve their field data collection
+efforts.&lt;/p&gt;
+&lt;div class="section" id="problem"&gt;
+&lt;h2&gt;Problem&lt;/h2&gt;
+&lt;p&gt;APD provides variety of services rehabilitate under privileged people with
+disabilities. Before they can render any service, they need register the
+individuals with the organization and collect basic background information.
+Registrations are mostly done in their field offices or at camps organized in
+rural areas. Paper forms were filled at the site and shipped to their field
+office. A staff member entered the data manually into their software platform.&lt;/p&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="a registration camp" src="/images/apd1.jpg" /&gt;
+&lt;p class="caption"&gt;A registration camp.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;This has many problems:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The text on the paper form was often illegible. Some fields were missing or
+inaccurate.&lt;/li&gt;
+&lt;li&gt;Data entry was laborious and introduced errors.&lt;/li&gt;
+&lt;li&gt;4–6 weeks of lag time before the data was available in the system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="our-solution"&gt;
+&lt;h2&gt;Our solution&lt;/h2&gt;
+&lt;p&gt;We helped APD implement a process using &lt;a class="reference external" href="https://opendatakit.org/"&gt;OpenDataKit (ODK)&lt;/a&gt; that allowed capture of the form using android
+devices. With the new system, the data is captured on the mobile device using
+the &lt;a class="reference external" href="https://play.google.com/store/apps/details?id=org.odk.collect.android&amp;amp;hl=en"&gt;ODK Collect&lt;/a&gt;
+app in the field and sent to a &lt;a class="reference external" href="https://opendatakit.org/use/aggregate/"&gt;ODK Aggregate&lt;/a&gt; server running on Google AppEngine.
+The data ends up in a shared spreadsheet which is imported to APD’s system
+after each registration camp.&lt;/p&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="APD staff using the ODK collect mobile app" src="/images/apd2.png" /&gt;
+&lt;p class="caption"&gt;APD staff using the ODK collect mobile app&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;This new workflow offers several advantages over the paper based forms:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Reliable data collection in areas with poor network connectivity. ODK Collect
+app can work completely offline and the data is stored on the device memory.
+Once the staff members are back in office and connect to a WiFi network --
+the data is sent to the server.&lt;/li&gt;
+&lt;li&gt;The mobile app enforces checks, so all the data is consistent and there are
+no missing fields.&lt;/li&gt;
+&lt;li&gt;Allows for the capture of pictures and additional metadata (such as time,
+location, staff id).&lt;/li&gt;
+&lt;li&gt;The data is exported from the spreadsheet and imported to their system the
+next day -- cutting the lag from weeks to hours.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="timeline"&gt;
+&lt;h2&gt;Timeline&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;October 2014: Met with the APD registration team to understand their
+requirements and design a process.&lt;/li&gt;
+&lt;li&gt;November 2014: A prototype is created by migrating the registration form to
+ODK using XLSForm. APD trains field staff on using the mobile app. Successful
+field test.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="First field test" src="/images/apd3.jpg" /&gt;
+&lt;p class="caption"&gt;First field test of the app with newly trained staff&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;December 2014: First full-fledged camp with 3 devices. Successful
+registration of 55 participants. Staff is very happy with the increased
+speed, accuracy and reduction in delay in getting the registrations
+processed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="First real deployment." src="/images/apd4.jpg" /&gt;
+&lt;p class="caption"&gt;First ‘real’ deployment.Staff had paper forms as backup, but did not need it&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;January 2014: APD moves their registrations completely to mobile devices. All
+registrations are completely paperless and have the added benefit of having
+participant’s picture as part of the registration process. Over 500
+registrations processed without a problem.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="paperless registration camp" src="/images/apd5.jpg" /&gt;
+&lt;p class="caption"&gt;Completely paperless registration camp after migration to the mobile app&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;While this is a great start, we are looking at helping them with other
+challenges in the field. In the coming months, we want to tackle the following
+problems:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Migrate patient visit and treatment forms to OpenDataKit. These require
+having access to the patient’s medical history in the field. OpenDataKit’s
+2.0 suite of tools would be a good fit.&lt;/li&gt;
+&lt;li&gt;Task allocation and scheduling optimization for the field staff.&lt;/li&gt;
+&lt;li&gt;Encoding the knowledge from the training manual to a mobile app.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary></entry></feed>
