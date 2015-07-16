@@ -3,7 +3,7 @@ Implementing a Field Data collection app for APD
 
 :slug: opendatakit-for-apd
 
-:date: 2014-04-29
+:date: 2015-04-29
 :category: odk
 
 The `Association for People with Disability (APD) <http://www.apd-india.org/>`_
