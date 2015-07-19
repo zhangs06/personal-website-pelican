@@ -80,11 +80,12 @@ inputs and pass them to the command-line tool as layers of a single input.
    :align: center
 
 4. You can see that in a single command we got the results by doing a spatial
-   join that took probably 10 steps in a GIS environment. We can do a reverse
-   spatial join as well. We can join the name of the Borough to each feature of
-   the Nursing Homes layer. Using the ``ogr2ogr`` tool we can write out a
-   shapefile from the resulting join. Note that we are adding a ``geometry``
-   column in the SELECT statement which results in a spatial output. Run the following command:
+   join that takes a lot of clicking around in a GIS environment. We can do a
+   reverse spatial join as well. We can join the name of the Borough to each
+   feature of the Nursing Homes layer. Using the ``ogr2ogr`` tool we can write
+   out a shapefile from the resulting join. Note that we are adding a
+   ``geometry`` column in the SELECT statement which results in a spatial
+   output. Run the following command:
 
 .. code-block:: none
 
