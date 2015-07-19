@@ -153,11 +153,12 @@ by b.BoroName&quot; -dialect SQLITE input.vrt
 <img alt="" class="align-center" src="/images/ogr-spatial2.png" />
 <ol class="arabic simple" start="4">
 <li>You can see that in a single command we got the results by doing a spatial
-join that took probably 10 steps in a GIS environment. We can do a reverse
-spatial join as well. We can join the name of the Borough to each feature of
-the Nursing Homes layer. Using the <tt class="docutils literal">ogr2ogr</tt> tool we can write out a
-shapefile from the resulting join. Note that we are adding a <tt class="docutils literal">geometry</tt>
-column in the SELECT statement which results in a spatial output. Run the following command:</li>
+join that takes a lot of clicking around in a GIS environment. We can do a
+reverse spatial join as well. We can join the name of the Borough to each
+feature of the Nursing Homes layer. Using the <tt class="docutils literal">ogr2ogr</tt> tool we can write
+out a shapefile from the resulting join. Note that we are adding a
+<tt class="docutils literal">geometry</tt> column in the SELECT statement which results in a spatial
+output. Run the following command:</li>
 </ol>
 <div class="highlight"><pre>ogr2ogr -sql &quot;SELECT n.Name, n.Capacity, n.geometry, b.BoroName from
 boroughs b, nursinghomes n WHERE ST_INTERSECTS(b.geometry, n.geometry)&quot;
