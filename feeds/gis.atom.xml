@@ -1,5 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Spatial Thoughts</title><link href="http://www.spatialthoughts.com/" rel="alternate"></link><link href="http://www.spatialthoughts.com/feeds/gis.atom.xml" rel="self"></link><id>http://www.spatialthoughts.com/</id><updated>2013-07-06T00:00:00+05:30</updated><entry><title>Calculate distance between a pair of lat/lon coordinates</title><link href="http://www.spatialthoughts.com/blog/gis/calculate-distance-spreadsheet/" rel="alternate"></link><updated>2013-07-06T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2013-07-06:blog/gis/calculate-distance-spreadsheet/</id><summary type="html">&lt;p&gt;I recently had a need to calculate distance between a large number of
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Spatial Thoughts</title><link href="http://www.spatialthoughts.com/" rel="alternate"></link><link href="http://www.spatialthoughts.com/feeds/gis.atom.xml" rel="self"></link><id>http://www.spatialthoughts.com/</id><updated>2015-07-19T00:00:00+05:30</updated><entry><title>Spatial Joins on the Command Line</title><link href="http://www.spatialthoughts.com/blog/gis/ogr-spatial-join/" rel="alternate"></link><updated>2015-07-19T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-07-19:blog/gis/ogr-spatial-join/</id><summary type="html">&lt;p&gt;GDAL and OGR libraries come with handy &lt;a class="reference external" href="http://www.gdal.org/ogr_utilities.html"&gt;command-line tools&lt;/a&gt;. These tools are quite powerful and
+can save you a lot of effort if you know how to use them. Here I will show how
+to use the &lt;a class="reference external" href="http://www.gdal.org/ogrinfo.html"&gt;ogrinfo&lt;/a&gt; and &lt;a class="reference external" href="http://www.gdal.org/ogr2ogr.html"&gt;ogr2ogr&lt;/a&gt; tools to perform spatial joins. A single
+command can do complex operations on your spatial data and save you a lot of
+clicking-around and data-munging in a GIS.&lt;/p&gt;
+&lt;div class="section" id="get-the-tools"&gt;
+&lt;h2&gt;Get the Tools&lt;/h2&gt;
+&lt;p&gt;The best way to get the command-line tools on Windows is via the &lt;a class="reference external" href="http://trac.osgeo.org/osgeo4w/"&gt;OSGeo4W
+Installer&lt;/a&gt;. If you are on Linux or Mac, see
+&lt;a class="reference external" href="https://trac.osgeo.org/gdal/wiki/DownloadingGdalBinaries"&gt;these instructions&lt;/a&gt; to get the package
+for your platform.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="get-the-data"&gt;
+&lt;h2&gt;Get the Data&lt;/h2&gt;
+&lt;p&gt;Review the data and problem statement from the &lt;a class="reference external" href="http://www.qgistutorials.com/en/docs/performing_spatial_joins.html"&gt;Performing Spatial Joins&lt;/a&gt;
+tutorial. Download the Borough Boundaries and Nursing Homes shapefiles.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="procedure"&gt;
+&lt;h2&gt;Procedure&lt;/h2&gt;
+&lt;p&gt;OGR command line tools accept only 1 input. But we have 2 inputs for the
+spatial join. An easy way to fix this, is to use a &lt;a class="reference external" href="http://www.gdal.org/drv_vrt.html"&gt;VRT file&lt;/a&gt;. A VRT file allows us to specify multiple
+inputs and pass them to the command-line tool as layers of a single input.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Unzip the input shapefiles in a single folder on your drive. Create a file
+named &lt;tt class="docutils literal"&gt;input.vrt&lt;/tt&gt; in the same folder with the following content.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;lt;OGRVRTDataSource&amp;gt;
+    &amp;lt;OGRVRTLayer name=&amp;quot;boroughs&amp;quot;&amp;gt;
+        &amp;lt;SrcDataSource&amp;gt;nybb.shp&amp;lt;/SrcDataSource&amp;gt;
+        &amp;lt;SrcLayer&amp;gt;nybb&amp;lt;/SrcLayer&amp;gt;
+    &amp;lt;/OGRVRTLayer&amp;gt;
+    &amp;lt;OGRVRTLayer name=&amp;quot;nursinghomes&amp;quot;&amp;gt;
+        &amp;lt;SrcDataSource&amp;gt;OEM_NursingHomes_001.shp&amp;lt;/SrcDataSource&amp;gt;
+        &amp;lt;SrcLayer&amp;gt;OEM_NursingHomes_001&amp;lt;/SrcLayer&amp;gt;
+    &amp;lt;/OGRVRTLayer&amp;gt;
+&amp;lt;/OGRVRTDataSource&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ol class="arabic simple" start="2"&gt;
+&lt;li&gt;Open the OSGeo4W shell and &lt;tt class="docutils literal"&gt;cd&lt;/tt&gt; to the directory containing the shapefiles
+and the vrt file. Run the &lt;tt class="docutils literal"&gt;ogrinfo&lt;/tt&gt; command to check if the VRT file is
+correct.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;ogrinfo input.vrt
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="" class="align-center" src="/images/ogr-spatial1.png" /&gt;
+&lt;ol class="arabic simple" start="3"&gt;
+&lt;li&gt;OGR tools can run SQL queries on the input layers. We will use the
+&lt;tt class="docutils literal"&gt;ST_INTERSECTS&lt;/tt&gt; function to find all nursing homes that intersect the
+boundary of a borough and use the &lt;tt class="docutils literal"&gt;SUM&lt;/tt&gt; function to find the total nursing
+home capacity of a borough. Run the following command.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;ogrinfo -sql &amp;quot;SELECT b.BoroName, sum(n.Capacity) as total_capacity from
+boroughs b, nursinghomes n WHERE ST_INTERSECTS(b.geometry, n.geometry) group
+by b.BoroName&amp;quot; -dialect SQLITE input.vrt
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="" class="align-center" src="/images/ogr-spatial2.png" /&gt;
+&lt;ol class="arabic simple" start="4"&gt;
+&lt;li&gt;You can see that in a single command we got the results by doing a spatial
+join that took probably 10 steps in a GIS environment. We can do a reverse
+spatial join as well. We can join the name of the Borough to each feature of
+the Nursing Homes layer. Using the &lt;tt class="docutils literal"&gt;ogr2ogr&lt;/tt&gt; tool we can write out a
+shapefile from the resulting join. Note that we are adding a &lt;tt class="docutils literal"&gt;geometry&lt;/tt&gt;
+column in the SELECT statement which results in a spatial output. Run the following command:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;ogr2ogr -sql &amp;quot;SELECT n.Name, n.Capacity, n.geometry, b.BoroName from
+boroughs b, nursinghomes n WHERE ST_INTERSECTS(b.geometry, n.geometry)&amp;quot;
+-dialect SQLITE output.shp input.vrt
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="" class="align-center" src="/images/ogr-spatial3.png" /&gt;
+&lt;ol class="arabic simple" start="5"&gt;
+&lt;li&gt;Open the &lt;tt class="docutils literal"&gt;output.shp&lt;/tt&gt; in a GIS to verify that the new shapefile as
+attributes joined from the intersecting borough. You can use &lt;tt class="docutils literal"&gt;ogrinfo&lt;/tt&gt;
+command to check that as well.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;ogrinfo -al output.shp
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="" class="align-center" src="/images/ogr-spatial4.png" /&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Calculate distance between a pair of lat/lon coordinates</title><link href="http://www.spatialthoughts.com/blog/gis/calculate-distance-spreadsheet/" rel="alternate"></link><updated>2013-07-06T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2013-07-06:blog/gis/calculate-distance-spreadsheet/</id><summary type="html">&lt;p&gt;I recently had a need to calculate distance between a large number of
 latitude/longitude coordinate pairs. There are many options available if you
 want to import these in a GIS and run analysis. But there is a simpler and much
 more accesible way if you aren't doing very high accuracy calculations.&lt;/p&gt;
