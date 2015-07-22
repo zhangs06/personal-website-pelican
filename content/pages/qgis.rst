@@ -5,7 +5,7 @@ QGIS
 
 Tutorials and Tips
 ------------------
-Open-source and liberally licensed tutorials and tips for QGIS. Widely used to
+Open-source and liberally licensed tutorials and tips for QGIS. Widely used
 across the globe to learn and teach QGIS. `http://www.qgistutorials.com
 <http://www.qgistutorials.com>`_
 
