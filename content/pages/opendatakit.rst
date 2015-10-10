@@ -5,9 +5,19 @@ OpenDataKit (ODK)
 
 Trainings
 ---------
-
 Mobile Field Data Collection using OpenDataKit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Student Conference on Conservation Science (SCCS) 2015 - Bangalore*
+
+Introduce the participants to OpenDataKit (ODK) and taught practical skills to
+setup ODK tools for their own field data collection needs.
+
+.. image:: /images/sccs-odk.jpg
+   :alt: ODK workshop at SCCS
+
+
+Hands-on Workshop on OpenDataKit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *Center for Ecological Studies, Indian Institute of Science (IISc), Bangalore.*
 
