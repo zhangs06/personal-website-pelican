@@ -6,10 +6,10 @@ GIS Data Processing with Mapshaper
 :date: 2015-10-21
 :category: gis
 
-`Mapshaper <http://mapshaper.org/>`_ is a powerful tool that is best known for
-fast and easy simplification. Other tools for simplification - like QGIS or
-ogr2ogr - do not preserve topology while simplifying.  This means you may get
-sliver polygons or missing intersections. Mapshaper performs
+`Mapshaper <http://mapshaper.org/>`_ is a free and open-source tool that is
+best known for fast and easy simplification. Other tools for simplification -
+like QGIS or ogr2ogr - do not preserve topology while simplifying.  This means
+you may get sliver polygons or missing intersections. Mapshaper performs
 topologically-aware simplification and gives you much more control on the
 process.
 
