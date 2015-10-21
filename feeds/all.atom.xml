@@ -1,5 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Spatial Thoughts</title><link href="http://www.spatialthoughts.com/" rel="alternate"></link><link href="http://www.spatialthoughts.com/feeds/all.atom.xml" rel="self"></link><id>http://www.spatialthoughts.com/</id><updated>2015-07-19T00:00:00+05:30</updated><entry><title>Spatial Joins on the Command Line</title><link href="http://www.spatialthoughts.com/blog/gis/ogr-spatial-join/" rel="alternate"></link><updated>2015-07-19T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-07-19:blog/gis/ogr-spatial-join/</id><summary type="html">&lt;p&gt;GDAL and OGR libraries come with handy &lt;a class="reference external" href="http://www.gdal.org/ogr_utilities.html"&gt;command-line tools&lt;/a&gt;. These tools are quite powerful and
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Spatial Thoughts</title><link href="http://www.spatialthoughts.com/" rel="alternate"></link><link href="http://www.spatialthoughts.com/feeds/all.atom.xml" rel="self"></link><id>http://www.spatialthoughts.com/</id><updated>2015-10-21T00:00:00+05:30</updated><entry><title>GIS Data Processing with Mapshaper</title><link href="http://www.spatialthoughts.com/blog/gis/mapshaper-command-line/" rel="alternate"></link><updated>2015-10-21T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-10-21:blog/gis/mapshaper-command-line/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://mapshaper.org/"&gt;Mapshaper&lt;/a&gt; is a powerful tool that is best known for
+fast and easy simplification. Other tools for simplification - like QGIS or
+ogr2ogr - do not preserve topology while simplifying.  This means you may get
+sliver polygons or missing intersections. Mapshaper performs
+topologically-aware simplification and gives you much more control on the
+process.&lt;/p&gt;
+&lt;p&gt;But Mapshaper is much more than a simplification tool. It is in active
+development and has many more data processing and editing capabilities now. It
+also has a command-line version of the tool which can be run from a terminal.
+In this post, we will explore the command-line tool to carry out some complex
+geoprocessing tasks.&lt;/p&gt;
+&lt;div class="section" id="get-the-tools"&gt;
+&lt;h2&gt;Get the Tools&lt;/h2&gt;
+&lt;p&gt;Mapshaper is a &lt;a class="reference external" href="https://nodejs.org/en/"&gt;Node.js&lt;/a&gt; application. &lt;a class="reference external" href="https://nodejs.org/en/download/"&gt;Download&lt;/a&gt; and install Node.js for your platform. You
+will need the Node Package Manager (NPM) to install mapshaper,  so make sure it
+is enabled while going through the installer.&lt;/p&gt;
+&lt;img alt="" class="align-center" src="/images/mapshaper1.png" /&gt;
+&lt;p&gt;Once Node.js is installed, launch the Windows &lt;tt class="docutils literal"&gt;Command Prompt (cmd.exe)&lt;/tt&gt; and
+run the following command to install mapshaper.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;npm install -g mapshaper
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="" class="align-center" src="/images/mapshaper2.png" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="get-the-data"&gt;
+&lt;h2&gt;Get the Data&lt;/h2&gt;
+&lt;p&gt;Review the data and problem statement from the &lt;a class="reference external" href="http://www.qgistutorials.com/en/docs/performing_table_joins.html"&gt;Performing Table Joins&lt;/a&gt;
+tutorial. Download the Census Tracts shapefile &lt;tt class="docutils literal"&gt;tl_2013_06_tract.zip&lt;/tt&gt; and the
+Population CSV &lt;tt class="docutils literal"&gt;ca_tracts_pop.csv&lt;/tt&gt;. Unzip the &lt;tt class="docutils literal"&gt;tl_2013_06_tract.zip&lt;/tt&gt; file
+and extract it to a folder.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="procedure"&gt;
+&lt;h2&gt;Procedure&lt;/h2&gt;
+&lt;p&gt;Mapshaper command takes an input, an output and a sequence of commands to
+execute. Each command is followed by options specific to that command. All
+the commands and options are well documented at the &lt;a class="reference external" href="https://github.com/mbloch/mapshaper/wiki/Command-Reference"&gt;Mapshaper Wiki&lt;/a&gt;.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Let's start with simplification. We will take the census tracts shapefile
+and simlpify it to reduce the number of verticies and the total size. The
+command for simplification is &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-simplify&lt;/span&gt;&lt;/tt&gt;. You can supply a percentage
+value as an option to specify how aggressiveness of the simplification.
+Another useful option is &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;keep-shapes&lt;/span&gt;&lt;/tt&gt; which ensures that none of the
+polygons from the input will get deleted. Run the following command. Make
+sure you &lt;tt class="docutils literal"&gt;cd&lt;/tt&gt; to the directory where the data has been downloaded.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="note"&gt;
+&lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
+&lt;p class="last"&gt;The percentage value in the -simplify command can be a little misleading.
+The value indicates how many verticies to keep and not how many to remove.
+So a lower value would result in MORE simplification.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -o output.shp
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="" class="align-center" src="/images/mapshaper3.png" /&gt;
+&lt;ol class="arabic simple" start="2"&gt;
+&lt;li&gt;Mapshaper can also do Table Joins. We can now join the population field
+&lt;tt class="docutils literal"&gt;D001&lt;/tt&gt; from the &lt;tt class="docutils literal"&gt;ca_tracts_pop.csv&lt;/tt&gt; file. The join will match the fields
+we specify as &lt;tt class="docutils literal"&gt;keys&lt;/tt&gt; and add it to the output file. For the join to work
+correctly, we need to specify the field types in the CSV file. (Similar to
+how a .csvt file is needed by QGIS). We can 'chain' the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-join&lt;/span&gt;&lt;/tt&gt; command
+after the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-simplify&lt;/span&gt;&lt;/tt&gt; command to perform both the operation in a single
+command.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -join ca_tracts_pop.csv keys=GEOID,GEO.id2 field-types GEO.id2:str,D001:num -o output.shp
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="" class="align-center" src="/images/mapshaper4.png" /&gt;
+&lt;ol class="arabic simple" start="3"&gt;
+&lt;li&gt;Mapshaper can also dissolve features. In my testing, Mapshaper's dissolve
+operation was many times faster than QGIS or GRASS. Let's add a
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-dissolve&lt;/span&gt;&lt;/tt&gt; command and merge all census tracts for a county. We can
+also sum up the values of the &lt;tt class="docutils literal"&gt;D001&lt;/tt&gt; field to get the total population of
+the county from the sum of individual census tracts.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -join ca_tracts_pop.csv keys=GEOID,GEO.id2 field-types GEO.id2:str,D001:num -dissolve COUNTYFP sum-fields D001 -o output.shp
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="" class="align-center" src="/images/mapshaper5.png" /&gt;
+&lt;ol class="arabic simple" start="4"&gt;
+&lt;li&gt;The output format needed by many web apps is geojson or topojson. Mapshaper
+can write the output in these formats as well. Let's add a
+&lt;tt class="docutils literal"&gt;format=geojson&lt;/tt&gt; option to the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-o&lt;/span&gt;&lt;/tt&gt; command to write a geojson output.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -join ca_tracts_pop.csv keys=GEOID,GEO.id2 field-types GEO.id2:str,D001:num -dissolve COUNTYFP sum-fields D001 -o format=geojson output.geojson
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="" class="align-center" src="/images/mapshaper6.png" /&gt;
+&lt;ol class="arabic simple" start="5"&gt;
+&lt;li&gt;Finally, let's visualize our output. Go to &lt;a class="reference external" href="http://geojson.io"&gt;geojson.io&lt;/a&gt;
+and upload the resulting &lt;tt class="docutils literal"&gt;output.geojson&lt;/tt&gt;. You will be able to visualize
+the output shapes and their properties.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img alt="" class="align-center" src="/images/mapshaper7.png" /&gt;
+&lt;p&gt;By now, you must have figured out that we have a very powerful tool on our
+hands. In just a single line of command and just a few seconds of computing, we
+did Simplification, Table Join, Dissolve and Format translation.&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Spatial Joins on the Command Line</title><link href="http://www.spatialthoughts.com/blog/gis/ogr-spatial-join/" rel="alternate"></link><updated>2015-07-19T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-07-19:blog/gis/ogr-spatial-join/</id><summary type="html">&lt;p&gt;GDAL and OGR libraries come with handy &lt;a class="reference external" href="http://www.gdal.org/ogr_utilities.html"&gt;command-line tools&lt;/a&gt;. These tools are quite powerful and
 can save you a lot of effort if you know how to use them. Here I will show how
 to use the &lt;a class="reference external" href="http://www.gdal.org/ogrinfo.html"&gt;ogrinfo&lt;/a&gt; and &lt;a class="reference external" href="http://www.gdal.org/ogr2ogr.html"&gt;ogr2ogr&lt;/a&gt; tools to perform spatial joins. A single
 command can do complex operations on your spatial data and save you a lot of
