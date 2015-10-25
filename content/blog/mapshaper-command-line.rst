@@ -1,9 +1,9 @@
-GIS Data Processing with Mapshaper
+Geo Data Processing with Mapshaper
 ##################################
 
 :slug: mapshaper-command-line
 
-:date: 2015-10-21
+:date: 2015-10-24
 :category: gis
 
 `Mapshaper <http://mapshaper.org/>`_ is a free and open-source tool that is

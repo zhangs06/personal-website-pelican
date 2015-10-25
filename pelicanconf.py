@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Ujaval Gandhi'
 SITENAME = u"Spatial Thoughts"
 SITEURL = ''
-THEME = "/home/ujaval/projects/pelican-themes/pelican-bootstrap3"
+THEME = "../pelican-themes/pelican-bootstrap3"
 
 DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False
