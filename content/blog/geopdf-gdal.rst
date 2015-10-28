@@ -11,7 +11,7 @@ brings the portability of PDF to geospatial data. A GeoPDF document can present
 raster and vector data and preserve the georeference information. This can be a
 useful format for non-GIS folks to consume GIS data without needing
 GIS-software. While GeoPDF is a proprietary format, we have a close alternative
-is the open `Geospatial PDF <https://en.wikipedia.org/wiki/Geospatial_PDF>`_
+in the open `Geospatial PDF <https://en.wikipedia.org/wiki/Geospatial_PDF>`_
 format. GDAL has added support for creating Geospatial PDF documents from
 version 1.10 onwards. In this post, I will show how to create a GeoPDF document
 containing multiple vector layers.
@@ -122,7 +122,7 @@ of the guide.
    base layer, or we can create an empty raster for the extent of the vector
    layer. ``ogrtindex`` command creates a bounding box polygon from the given
    input layers. ``gdal_rasterize`` command then fills this polygon with the
-   given value and creates a raster. the ``-tr`` option specifies the pixel
+   given value and creates a raster. The ``-tr`` option specifies the pixel
    resolution of the raster in degrees. You can tweak that to get the output
    size you need. ``cd`` to the directory where you have extracted the vector
    layers and run the following commands.
@@ -148,7 +148,7 @@ of the guide.
 .. image:: /images/geopdf3.png
    :align: center
 
-4. Once the conversion fiinshes, you can open the resulting ``bangalore.pdf``
+4. Once the conversion finishes, you can open the resulting ``bangalore.pdf``
    file in any PDF viewer. Opening it in Adobe Acrobat viewer, you can see the
    map data layers. You can browse the features in the layer panel, search for
    any attribute value and zoom/pan the map.
