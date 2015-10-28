@@ -4,7 +4,7 @@ brings the portability of PDF to geospatial data. A GeoPDF document can present
 raster and vector data and preserve the georeference information. This can be a
 useful format for non-GIS folks to consume GIS data without needing
 GIS-software. While GeoPDF is a proprietary format, we have a close alternative
-is the open &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Geospatial_PDF"&gt;Geospatial PDF&lt;/a&gt;
+in the open &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Geospatial_PDF"&gt;Geospatial PDF&lt;/a&gt;
 format. GDAL has added support for creating Geospatial PDF documents from
 version 1.10 onwards. In this post, I will show how to create a GeoPDF document
 containing multiple vector layers.&lt;/p&gt;
@@ -97,7 +97,7 @@ satellite imagery or scanned raster for the area, you can use it as the
 base layer, or we can create an empty raster for the extent of the vector
 layer. &lt;tt class="docutils literal"&gt;ogrtindex&lt;/tt&gt; command creates a bounding box polygon from the given
 input layers. &lt;tt class="docutils literal"&gt;gdal_rasterize&lt;/tt&gt; command then fills this polygon with the
-given value and creates a raster. the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-tr&lt;/span&gt;&lt;/tt&gt; option specifies the pixel
+given value and creates a raster. The &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-tr&lt;/span&gt;&lt;/tt&gt; option specifies the pixel
 resolution of the raster in degrees. You can tweak that to get the output
 size you need. &lt;tt class="docutils literal"&gt;cd&lt;/tt&gt; to the directory where you have extracted the vector
 layers and run the following commands.&lt;/li&gt;
@@ -117,7 +117,7 @@ the vector layers from the &lt;tt class="docutils literal"&gt;osm.vrt&lt;/tt&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;img alt="" class="align-center" src="/images/geopdf3.png" /&gt;
 &lt;ol class="arabic simple" start="4"&gt;
-&lt;li&gt;Once the conversion fiinshes, you can open the resulting &lt;tt class="docutils literal"&gt;bangalore.pdf&lt;/tt&gt;
+&lt;li&gt;Once the conversion finishes, you can open the resulting &lt;tt class="docutils literal"&gt;bangalore.pdf&lt;/tt&gt;
 file in any PDF viewer. Opening it in Adobe Acrobat viewer, you can see the
 map data layers. You can browse the features in the layer panel, search for
 any attribute value and zoom/pan the map.&lt;/li&gt;
