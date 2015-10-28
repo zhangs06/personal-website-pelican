@@ -87,7 +87,7 @@ the final command-line.
 latuviitta.org has a `comprehensive overview
 <http://latuviitta.org/documents/Geospatial_PDF_maps_from_OSM_with_GDAL.pdf>`_ of all the options available for
 GeoPDF creation via GDAL. The follow steps are adapted and simplified version
-of the guide.
+of that guide.
 
 1. First step is to create a ``.vrt`` file that can hold all the vector layers
    we want in the PDF. If you just need a single layer in the PDF, you can skip
