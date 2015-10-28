@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>Spatial Joins on the Command Line - Spatial Thoughts</title>
+    <title>Creating Geospatial PDFs with GDAL Tools - Spatial Thoughts</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,17 +10,17 @@
 
 
 
-<link rel="canonical" href="http://www.spatialthoughts.com/blog/gis/ogr-spatial-join/">
+<link rel="canonical" href="http://www.spatialthoughts.com/blog/gis/geopdf-gdal/">
 
         <meta name="author" content="Ujaval Gandhi" />
-        <meta name="description" content="GDAL and OGR libraries come with handy command-line tools. These tools are quite powerful and can save you a lot of effort if you know how to use them. Here I will show how to use the ogrinfo and ogr2ogr tools to perform spatial joins. A single command can do ..." />
+        <meta name="description" content="GeoPDF is a unique data format that brings the portability of PDF to geospatial data. A GeoPDF document can present raster and vector data and preserve the georeference information. This can be a useful format for non-GIS folks to consume GIS data without needing GIS-software. While GeoPDF is a proprietary ..." />
 
         <meta property="og:site_name" content="Spatial Thoughts" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Spatial Joins on the Command Line"/>
-        <meta property="og:url" content="http://www.spatialthoughts.com/blog/gis/ogr-spatial-join/"/>
-        <meta property="og:description" content="GDAL and OGR libraries come with handy command-line tools. These tools are quite powerful and can save you a lot of effort if you know how to use them. Here I will show how to use the ogrinfo and ogr2ogr tools to perform spatial joins. A single command can do ..."/>
-        <meta property="article:published_time" content="2015-07-19" />
+        <meta property="og:title" content="Creating Geospatial PDFs with GDAL Tools"/>
+        <meta property="og:url" content="http://www.spatialthoughts.com/blog/gis/geopdf-gdal/"/>
+        <meta property="og:description" content="GeoPDF is a unique data format that brings the portability of PDF to geospatial data. A GeoPDF document can present raster and vector data and preserve the georeference information. This can be a useful format for non-GIS folks to consume GIS data without needing GIS-software. While GeoPDF is a proprietary ..."/>
+        <meta property="article:published_time" content="2015-10-27" />
             <meta property="article:section" content="gis" />
             <meta property="article:author" content="Ujaval Gandhi" />
 
@@ -74,10 +74,10 @@ Spatial Thoughts            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://www.spatialthoughts.com/blog/gis/ogr-spatial-join/"
+                    <a href="http://www.spatialthoughts.com/blog/gis/geopdf-gdal/"
                        rel="bookmark"
-                       title="Permalink to Spatial Joins on the Command Line">
-                        Spatial Joins on the Command Line
+                       title="Permalink to Creating Geospatial PDFs with GDAL Tools">
+                        Creating Geospatial PDFs with GDAL Tools
                     </a>
                 </h1>
             </header>
@@ -87,7 +87,7 @@ Spatial Thoughts            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2015-07-19T00:00:00+05:30"> Sun 19 July 2015</time>
+        <i class="fa fa-calendar"></i><time datetime="2015-10-27T00:00:00+05:30"> Tue 27 October 2015</time>
     </span>
 
 
@@ -95,84 +95,140 @@ Spatial Thoughts            </a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>GDAL and OGR libraries come with handy <a class="reference external" href="http://www.gdal.org/ogr_utilities.html">command-line tools</a>. These tools are quite powerful and
-can save you a lot of effort if you know how to use them. Here I will show how
-to use the <a class="reference external" href="http://www.gdal.org/ogrinfo.html">ogrinfo</a> and <a class="reference external" href="http://www.gdal.org/ogr2ogr.html">ogr2ogr</a> tools to perform spatial joins. A single
-command can do complex operations on your spatial data and save you a lot of
-clicking-around and data-munging in a GIS.</p>
+                <p><a class="reference external" href="https://en.wikipedia.org/wiki/GeoPDF">GeoPDF</a> is a unique data format that
+brings the portability of PDF to geospatial data. A GeoPDF document can present
+raster and vector data and preserve the georeference information. This can be a
+useful format for non-GIS folks to consume GIS data without needing
+GIS-software. While GeoPDF is a proprietary format, we have a close alternative
+is the open <a class="reference external" href="https://en.wikipedia.org/wiki/Geospatial_PDF">Geospatial PDF</a>
+format. GDAL has added support for creating Geospatial PDF documents from
+version 1.10 onwards. In this post, I will show how to create a GeoPDF document
+containing multiple vector layers.</p>
 <div class="section" id="get-the-tools">
 <h2>Get the Tools</h2>
-<p>The best way to get the command-line tools on Windows is via the <a class="reference external" href="http://trac.osgeo.org/osgeo4w/">OSGeo4W
-Installer</a>. If you are on Linux or Mac, see
-<a class="reference external" href="https://trac.osgeo.org/gdal/wiki/DownloadingGdalBinaries">these instructions</a> to get the package
-for your platform.</p>
+<div class="section" id="windows">
+<h3>Windows</h3>
+<p><a class="reference external" href="https://trac.osgeo.org/osgeo4w/">OsGeo4W</a> is the best way to install GDAL on
+Windows. The default installation gives your GDAL tools with PDF format support. You
+can use the GDAL tools via the OsGeo4W Shell included in the install.</p>
+</div>
+<div class="section" id="mac">
+<h3>Mac</h3>
+<p>KyngChaos providers a convenient <a class="reference external" href="http://www.kyngchaos.com/software/frameworks#gdal_complete">GDAL installer</a> for Mac. You
+also need to install the additional <a class="reference external" href="http://www.kyngchaos.com/files/software/frameworks/GDAL-GeoPDF_Plugin-1.11.3-1.dmg">GeoPDF plugin</a>
+to enable support for PDF format.</p>
+<p>Once installed, add the path to GDAL library to your
+<tt class="docutils literal">.bash_profile</tt> file to be able to use the commands easily from the terminal.
+Launch a Terminal and type in the following commands.</p>
+<div class="highlight"><pre>echo &#39;export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH&#39; &gt;&gt; ~/.bash_profile
+source ~/.bash_profile
+</pre></div>
+</div>
+<div class="section" id="linux">
+<h3>Linux</h3>
+<p>Installation instructions will vary with the distribution. On Ubuntu, you can
+install the <tt class="docutils literal"><span class="pre">gdal-bin</span></tt> package.</p>
+<div class="highlight"><pre>sudo apt-get install gdal-bin
+</pre></div>
+</div>
+</div>
+<div class="section" id="verify-gdal-install">
+<h2>Verify GDAL Install</h2>
+<p>If you already have GDAL installed, or just installed it, run the following
+command in a terminal to verify that your GDAL installation is working and has
+support for GeoPDF format.</p>
+<div class="highlight"><pre>gdalinfo --formats | grep -i pdf
+</pre></div>
+<p>If you see Geospatial PDF printed in the output - you are all set. If you do
+not get any output or get an error, your install is not correctly configured.</p>
+<img alt="" class="align-center" src="/images/geopdf1.png" />
 </div>
 <div class="section" id="get-the-data">
 <h2>Get the Data</h2>
-<p>Review the data and problem statement from the <a class="reference external" href="http://www.qgistutorials.com/en/docs/performing_spatial_joins.html">Performing Spatial Joins</a>
-tutorial. Download the Borough Boundaries and Nursing Homes shapefiles.</p>
+<p>For this example, I chose to use <a class="reference external" href="https://mapzen.com/data/metro-extracts">OpenStreetMap Metro Extracts</a> from MapZen. Download the shapefiles
+(OSM2PGSQL SHP format) for the city of your choice. I am using the extract for
+Bangalore city in this example. Unzip the downloaded file to a folder on your
+computer.</p>
 </div>
 <div class="section" id="procedure">
 <h2>Procedure</h2>
-<p>OGR command line tools accept only 1 input. But we have 2 inputs for the
-spatial join. An easy way to fix this, is to use a <a class="reference external" href="http://www.gdal.org/drv_vrt.html">VRT file</a>. A VRT file allows us to specify multiple
-inputs and pass them to the command-line tool as layers of a single input.</p>
+<p>The process for creating a GeoPDF file from a bunch of shapefiles is the matter
+of running a single <tt class="docutils literal">gdal_translate</tt> command. But we need to prepare the data
+and figure out the correct command-line options. So follow along to understand
+how you can arrive at the final command - or simply scroll to the end to see
+the final command-line.</p>
+<p>latuviitta.org has a <a class="reference external" href="http://latuviitta.org/documents/Geospatial_PDF_maps_from_OSM_with_GDAL.pdf">comprehensive overview</a> of all the options available for
+GeoPDF creation via GDAL. The follow steps are adapted and simplified version
+of the guide.</p>
 <ol class="arabic simple">
-<li>Unzip the input shapefiles in a single folder on your drive. Create a file
-named <tt class="docutils literal">input.vrt</tt> in the same folder with the following content.</li>
+<li>First step is to create a <tt class="docutils literal">.vrt</tt> file that can hold all the vector layers
+we want in the PDF. If you just need a single layer in the PDF, you can skip
+creating the <tt class="docutils literal">.vrt</tt> file and directly reference the layer in place of the
+VRT. Note the &lt;SrcSQL&gt; tag in the VRT file. This is for filtering out all
+features where the 'name' field is empty. You can leave that out or modify
+to suit your dataset. Name this file <tt class="docutils literal">osm.vrt</tt> and save it on the same
+folder with your data.</li>
 </ol>
 <div class="highlight"><pre>&lt;OGRVRTDataSource&gt;
-    &lt;OGRVRTLayer name=&quot;boroughs&quot;&gt;
-        &lt;SrcDataSource&gt;nybb.shp&lt;/SrcDataSource&gt;
-        &lt;SrcLayer&gt;nybb&lt;/SrcLayer&gt;
+    &lt;OGRVRTLayer name=&quot;roads&quot;&gt;
+        &lt;SrcDataSource&gt;bengaluru_india_osm_line.shp&lt;/SrcDataSource&gt;
+        &lt;SrcLayer&gt;bengaluru_india_osm_line&lt;/SrcLayer&gt;
+        &lt;SrcSQL dialect=&quot;sqlite&quot;&gt;SELECT name, highway, geometry from bengaluru_india_osm_line where name is not NULL&lt;/SrcSQL&gt;
+        &lt;GeometryType&gt;wkbLineString&lt;/GeometryType&gt;
+        &lt;LayerSRS&gt;WGS84&lt;/LayerSRS&gt;
     &lt;/OGRVRTLayer&gt;
-    &lt;OGRVRTLayer name=&quot;nursinghomes&quot;&gt;
-        &lt;SrcDataSource&gt;OEM_NursingHomes_001.shp&lt;/SrcDataSource&gt;
-        &lt;SrcLayer&gt;OEM_NursingHomes_001&lt;/SrcLayer&gt;
+    &lt;OGRVRTLayer name=&quot;pois&quot;&gt;
+        &lt;SrcDataSource&gt;bengaluru_india_osm_point.shp&lt;/SrcDataSource&gt;
+        &lt;SrcLayer&gt;bengaluru_india_osm_point&lt;/SrcLayer&gt;
+        &lt;SrcSQL dialect=&quot;sqlite&quot;&gt;SELECT name, geometry from bengaluru_india_osm_point where name is not NULL&lt;/SrcSQL&gt;
+        &lt;GeometryType&gt;wkbPoint&lt;/GeometryType&gt;
+        &lt;LayerSRS&gt;WGS84&lt;/LayerSRS&gt;
     &lt;/OGRVRTLayer&gt;
 &lt;/OGRVRTDataSource&gt;
 </pre></div>
 <ol class="arabic simple" start="2">
-<li>Open the OSGeo4W shell and <tt class="docutils literal">cd</tt> to the directory containing the shapefiles
-and the vrt file. Run the <tt class="docutils literal">ogrinfo</tt> command to check if the VRT file is
-correct.</li>
+<li>GeoPDF is a raster format that can overlay
+vectors on top. So we need a raster layer as the base. If you have some
+satellite imagery or scanned raster for the area, you can use it as the
+base layer, or we can create an empty raster for the extent of the vector
+layer. <tt class="docutils literal">ogrtindex</tt> command creates a bounding box polygon from the given
+input layers. <tt class="docutils literal">gdal_rasterize</tt> command then fills this polygon with the
+given value and creates a raster. the <tt class="docutils literal"><span class="pre">-tr</span></tt> option specifies the pixel
+resolution of the raster in degrees. You can tweak that to get the output
+size you need. <tt class="docutils literal">cd</tt> to the directory where you have extracted the vector
+layers and run the following commands.</li>
 </ol>
-<div class="highlight"><pre>ogrinfo input.vrt
+<div class="highlight"><pre>cd Users\Ujaval\Downloads\bengaluru_india.osm2pgsql-shapefiles
+
+ogrtindex -accept _different_schemas extent.shp osm.vrt
+
+gdal_rasterize -burn 255 -ot Byte -tr 0.0001 0.0001 extent.shp bangalore.tif
 </pre></div>
-<img alt="" class="align-center" src="/images/ogr-spatial1.png" />
+<img alt="" class="align-center" src="/images/geopdf2.png" />
 <ol class="arabic simple" start="3">
-<li>OGR tools can run SQL queries on the input layers. We will use the
-<tt class="docutils literal">ST_INTERSECTS</tt> function to find all nursing homes that intersect the
-boundary of a borough and use the <tt class="docutils literal">SUM</tt> function to find the total nursing
-home capacity of a borough. Run the following command.</li>
+<li>Now we can convert the empty <tt class="docutils literal">bangalore.tif</tt> raster to a PDF - overlaying
+the vector layers from the <tt class="docutils literal">osm.vrt</tt> file.</li>
 </ol>
-<div class="highlight"><pre>ogrinfo -sql &quot;SELECT b.BoroName, sum(n.Capacity) as total_capacity from
-boroughs b, nursinghomes n WHERE ST_INTERSECTS(b.geometry, n.geometry) group
-by b.BoroName&quot; -dialect SQLITE input.vrt
+<div class="highlight"><pre>gdal_translate -of PDF -a_srs EPSG:4326 bangalore.tif bangalore.pdf -co OGR_DATASOURCE=osm.vrt -co OGR_DISPLAY_FIELD=&quot;name&quot;
 </pre></div>
-<img alt="" class="align-center" src="/images/ogr-spatial2.png" />
+<img alt="" class="align-center" src="/images/geopdf3.png" />
 <ol class="arabic simple" start="4">
-<li>You can see that in a single command we got the results by doing a spatial
-join that takes a lot of clicking around in a GIS environment. We can do a
-reverse spatial join as well. We can join the name of the Borough to each
-feature of the Nursing Homes layer. Using the <tt class="docutils literal">ogr2ogr</tt> tool we can write
-out a shapefile from the resulting join. Note that we are adding a
-<tt class="docutils literal">geometry</tt> column in the SELECT statement which results in a spatial
-output. Run the following command:</li>
+<li>Once the conversion fiinshes, you can open the resulting <tt class="docutils literal">bangalore.pdf</tt>
+file in any PDF viewer. Opening it in Adobe Acrobat viewer, you can see the
+map data layers. You can browse the features in the layer panel, search for
+any attribute value and zoom/pan the map.</li>
 </ol>
-<div class="highlight"><pre>ogr2ogr -sql &quot;SELECT n.Name, n.Capacity, n.geometry, b.BoroName from
-boroughs b, nursinghomes n WHERE ST_INTERSECTS(b.geometry, n.geometry)&quot;
--dialect SQLITE output.shp input.vrt
-</pre></div>
-<img alt="" class="align-center" src="/images/ogr-spatial3.png" />
+<img alt="" class="align-center" src="/images/geopdf4.png" />
 <ol class="arabic simple" start="5">
-<li>Open the <tt class="docutils literal">output.shp</tt> in a GIS to verify that the new shapefile as
-attributes joined from the intersecting borough. You can use <tt class="docutils literal">ogrinfo</tt>
-command to check that as well.</li>
+<li>Another popular use of GeoPDF files is to use it as offline base maps using
+programs such as <a class="reference external" href="http://www.avenza.com/pdf-maps">Avenza PDF Maps</a>.
+Loading the <tt class="docutils literal">bangalore.pdf</tt> file on Avenza Maps on your mobile phone, you
+can use the GPS to view your current location or trace a GPS route on top.
+Search also works across layers in the PDF.</li>
 </ol>
-<div class="highlight"><pre>ogrinfo -al output.shp
-</pre></div>
-<img alt="" class="align-center" src="/images/ogr-spatial4.png" />
+<img alt="" class="align-center" src="/images/geopdf5.png" />
+<p>You can download the sample <a class="reference external" href="https://drive.google.com/open?id=0B0Xc7QoGul60eFRuTHVvUWRVZEE">bangalore.pdf</a> Geospatial
+PDF format file for exploring the format yourself.</p>
 </div>
 
             </div>
@@ -186,8 +242,8 @@ command to check that as well.</li>
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
             var disqus_shortname = 'spatialthoughts'; // required: replace example with your forum shortname
 
-                    var disqus_identifier = 'ogr-spatial-join';
-                var disqus_url = 'http://www.spatialthoughts.com/blog/gis/ogr-spatial-join/';
+                    var disqus_identifier = 'geopdf-gdal';
+                var disqus_url = 'http://www.spatialthoughts.com/blog/gis/geopdf-gdal/';
 
             var disqus_config = function () {
                 this.language = "en";
