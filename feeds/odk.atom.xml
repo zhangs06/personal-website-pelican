@@ -1,5 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Spatial Thoughts</title><link href="http://www.spatialthoughts.com/" rel="alternate"></link><link href="http://www.spatialthoughts.com/feeds/odk.atom.xml" rel="self"></link><id>http://www.spatialthoughts.com/</id><updated>2015-04-29T00:00:00+05:30</updated><entry><title>Implementing a Field Data collection app for APD</title><link href="http://www.spatialthoughts.com/blog/odk/opendatakit-for-apd/" rel="alternate"></link><updated>2015-04-29T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-04-29:blog/odk/opendatakit-for-apd/</id><summary type="html">&lt;p&gt;The &lt;a class="reference external" href="http://www.apd-india.org/"&gt;Association for People with Disability (APD)&lt;/a&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Spatial Thoughts</title><link href="http://www.spatialthoughts.com/" rel="alternate"></link><link href="http://www.spatialthoughts.com/feeds/odk.atom.xml" rel="self"></link><id>http://www.spatialthoughts.com/</id><updated>2015-12-06T00:00:00+05:30</updated><entry><title>Line Transact Surveys using OpenDataKit(ODK)</title><link href="http://www.spatialthoughts.com/blog/odk/odk-line-transact/" rel="alternate"></link><updated>2015-12-06T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-12-06:blog/odk/odk-line-transact/</id><summary type="html">&lt;p&gt;This weekend, I got an opportunity to volunteer with a non-profit called &lt;a class="reference external" href="http://www.junglescapes.org/"&gt;Junglescapes&lt;/a&gt;. We took a day trip to the Bandipur forest in
+Karnataka where they have done extensive work in forest restoration. One of
+their success stories is working with the locals to remove invasive species
+such as Lantana from the forest. Junglescapes volunteers and locals carry out
+regular line transact surveys to determine the impact of their interventions.
+One of the goals for my participation was to see if we can replace the
+cumbersone paper forms and handheld GPS devices with a mobile-phone based
+survey using ODK. I am sharing my notes on how we setup the survey and mapping
+of the result.&lt;/p&gt;
+&lt;div class="section" id="setting-up-odk"&gt;
+&lt;h2&gt;Setting up ODK&lt;/h2&gt;
+&lt;p&gt;I created a survey form using &lt;a class="reference external" href="http://xlsform.org/"&gt;XLSForm&lt;/a&gt; standard. The
+form is quite simple and uses the &lt;em&gt;geopoint&lt;/em&gt; field type to collect the Lat/Lon
+of the start and end points of the transact. There is also a repeated field of
+type &lt;em&gt;image&lt;/em&gt; to capture pictures along the transact. You can make a copy of
+&lt;a class="reference external" href="https://docs.google.com/spreadsheets/d/1WNuMkJKvmW6xI5-blRqSsKBMb89Sn556PUKk1Ufi010/copy"&gt;this XLSForm spreadsheet&lt;/a&gt;
+and use it to customize your transact survey. Once the spreadsheet was ready, I
+converted it XForm using the &lt;a class="reference external" href="http://opendatakit.org/xiframe/"&gt;online converter&lt;/a&gt;. The resulting XML file was loaded to a &lt;a class="reference external" href="https://opendatakit.org/use/aggregate/"&gt;ODK
+Aggregate&lt;/a&gt;  server running on
+AppEngine. Individual Android devices running the &lt;a class="reference external" href="https://opendatakit.org/use/collect/"&gt;ODK Collect&lt;/a&gt; app were configured to use this server
+and forms were downloaded to the devices. You may also skip the server and copy
+the XML directly to mobile devices running the ODK Collect App.&lt;/p&gt;
+&lt;img alt="" class="align-center" src="/images/line-transact1.png" style="width: 400px;" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="collecting-field-data"&gt;
+&lt;h2&gt;Collecting Field Data&lt;/h2&gt;
+&lt;p&gt;Upon entering the wildlife sanctuary, we trekked up to the region where the
+restoration has been done. There were 4 sites where we had to carry out the
+line transact survey. We lay down a 150ft line using a tape measure and
+collected data about number of trees, shrubs, plants and grass in a 10ft zone
+around the line. The data was entered directly in the ODK Collect app.&lt;/p&gt;
+&lt;p&gt;The ODK Collect app works completely offline. We were in the middle of a forest
+with no cell coverage but data collection work seamlessly. The app would sync
+the data once the devices get cell reception.&lt;/p&gt;
+&lt;img alt="" class="align-center" src="/images/line-transact2.png" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="processing-field-data"&gt;
+&lt;h2&gt;Processing Field Data&lt;/h2&gt;
+&lt;p&gt;After we finished the surveys, we headed back from the sanctuary. When our
+devices got mobile data signals, the form submissions were submitted to the ODK
+Aggregate server automatically. You can also use the &lt;a class="reference external" href="https://opendatakit.org/use/briefcase/"&gt;ODK Briefcase&lt;/a&gt; application on your computer to copy
+the data from devices directly.&lt;/p&gt;
+&lt;p&gt;Once you pull the data from the devices using ODK Aggregate or ODK Briefcase,
+you would have a spreadsheet with individual form submissions. This itself can
+be a final product of the survey and can be maintained as a record from
+periodic surveys. We wanted to also map the data since we had collected GPS
+coordinates for the start and end of each transact. This required a little bit
+of post-processing of the data to create a &lt;a class="reference external" href="https://docs.google.com/spreadsheets/d/14NWa14J5rzD1jCfGWkip2NuTddDEVWzHisyah2JWRlY/edit?usp=sharing"&gt;spreadsheet like this&lt;/a&gt;.
+Saving thie spreadsheet as a CSV, it can be imported in QGIS.&lt;/p&gt;
+&lt;img alt="" class="align-center" src="/images/line-transact3.png" /&gt;
+&lt;p&gt;Using the &lt;em&gt;Convert points to line&lt;/em&gt; tool from the Processing Toolbox, I created
+a line layer from the start and end points of the transact.&lt;/p&gt;
+&lt;img alt="" class="align-center" src="/images/line-transact4.png" /&gt;
+&lt;p&gt;The resulting QGIS line layer was exported as a KML and imported to &lt;a class="reference external" href="http://google.com/mymaps"&gt;Google My
+Maps&lt;/a&gt; . I had also collected our entire trek and
+some waypoints using the &lt;a class="reference external" href="https://play.google.com/store/apps/details?id=com.google.android.maps.mytracks&amp;amp;hl=en"&gt;My Tracks app&lt;/a&gt;.
+This was also imported to Google My Maps. These layers resulted in a rich and
+informative map from our field data exercise. See the &lt;a class="reference external" href="https://www.google.com/maps/d/viewer?mid=zjnvnF630TsQ.kngZHPKOj9HE"&gt;live interactive map&lt;/a&gt; here.&lt;/p&gt;
+&lt;img alt="" class="align-center" src="/images/line-transact5.png" /&gt;
+&lt;p&gt;Overall, using ODK for the transact surveys helped speed up the data
+collection. There was no data-entry after the surveys and creating an
+interactive map visualization was a breeze. If you are an individual or a team
+who is doing field data collection, moving to ODK would help you reduce errors
+and collect accurate data without the hassles of data entry.&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Implementing a Field Data collection app for APD</title><link href="http://www.spatialthoughts.com/blog/odk/opendatakit-for-apd/" rel="alternate"></link><updated>2015-04-29T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-04-29:blog/odk/opendatakit-for-apd/</id><summary type="html">&lt;p&gt;The &lt;a class="reference external" href="http://www.apd-india.org/"&gt;Association for People with Disability (APD)&lt;/a&gt;
 is a non-profit organization based out of Bangalore, India. Their mission is to
 reach out and rehabilitate people with disability from the under privileged
 segment. Over the past year, I along with my colleagues have been volunteering
