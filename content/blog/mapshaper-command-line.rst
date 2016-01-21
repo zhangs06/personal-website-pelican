@@ -11,7 +11,12 @@ best known for fast and easy simplification. Other tools for simplification -
 like QGIS or ogr2ogr - do not preserve topology while simplifying.  This means
 you may get sliver polygons or missing intersections. Mapshaper performs
 topologically-aware simplification and gives you much more control on the
-process.
+process. 
+
+..note::
+
+  Other popular open-source tools, PostGIS and GRASS can do
+  topologically-aware simplifications as well.
 
 But Mapshaper is much more than a simplification tool. It is in active
 development and has many more data processing and editing capabilities now. It
