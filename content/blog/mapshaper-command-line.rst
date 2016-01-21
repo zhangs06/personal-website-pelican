@@ -13,7 +13,7 @@ you may get sliver polygons or missing intersections. Mapshaper performs
 topologically-aware simplification and gives you much more control on the
 process. 
 
-..note::
+.. note::
 
   Other popular open-source tools, PostGIS and GRASS can do
   topologically-aware simplifications as well.
