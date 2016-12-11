@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"
->
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
     <title>Creating Geospatial PDFs with GDAL Tools - Spatial Thoughts</title>
     <!-- Using the latest rendering mode for IE -->
@@ -34,6 +33,11 @@
 
         <link href="http://www.spatialthoughts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="Spatial Thoughts ATOM Feed"/>
+
+
+
+        <link href="http://www.spatialthoughts.com/feeds/gis.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Spatial Thoughts gis ATOM Feed"/>
 
 </head>
 <body>
@@ -69,7 +73,6 @@ Spatial Thoughts            </a>
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-
     <section id="content">
         <article>
             <header class="page-header">
@@ -89,6 +92,8 @@ Spatial Thoughts            </a>
     <span class="published">
         <i class="fa fa-calendar"></i><time datetime="2015-10-27T00:00:00+05:30"> Tue 27 October 2015</time>
     </span>
+
+
 
 
 
@@ -120,7 +125,7 @@ to enable support for PDF format.</p>
 <p>Once installed, add the path to GDAL library to your
 <tt class="docutils literal">.bash_profile</tt> file to be able to use the commands easily from the terminal.
 Launch a Terminal and type in the following commands.</p>
-<div class="highlight"><pre>echo &#39;export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH&#39; &gt;&gt; ~/.bash_profile
+<div class="highlight"><pre><span></span>echo &#39;export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH&#39; &gt;&gt; ~/.bash_profile
 source ~/.bash_profile
 </pre></div>
 </div>
@@ -128,7 +133,7 @@ source ~/.bash_profile
 <h3>Linux</h3>
 <p>Installation instructions will vary with the distribution. On Ubuntu, you can
 install the <tt class="docutils literal"><span class="pre">gdal-bin</span></tt> package.</p>
-<div class="highlight"><pre>sudo apt-get install gdal-bin
+<div class="highlight"><pre><span></span>sudo apt-get install gdal-bin
 </pre></div>
 </div>
 </div>
@@ -137,7 +142,7 @@ install the <tt class="docutils literal"><span class="pre">gdal-bin</span></tt> 
 <p>If you already have GDAL installed, or just installed it, run the following
 command in a terminal to verify that your GDAL installation is working and has
 support for GeoPDF format.</p>
-<div class="highlight"><pre>gdalinfo --formats | grep -i pdf
+<div class="highlight"><pre><span></span>gdalinfo --formats | grep -i pdf
 </pre></div>
 <p>If you see Geospatial PDF printed in the output - you are all set. If you do
 not get any output or get an error, your install is not correctly configured.</p>
@@ -169,7 +174,7 @@ features where the 'name' field is empty. You can leave that out or modify
 to suit your dataset. Name this file <tt class="docutils literal">osm.vrt</tt> and save it on the same
 folder with your data.</li>
 </ol>
-<div class="highlight"><pre>&lt;OGRVRTDataSource&gt;
+<div class="highlight"><pre><span></span>&lt;OGRVRTDataSource&gt;
     &lt;OGRVRTLayer name=&quot;roads&quot;&gt;
         &lt;SrcDataSource&gt;bengaluru_india_osm_line.shp&lt;/SrcDataSource&gt;
         &lt;SrcLayer&gt;bengaluru_india_osm_line&lt;/SrcLayer&gt;
@@ -198,7 +203,7 @@ resolution of the raster in degrees. You can tweak that to get the output
 size you need. <tt class="docutils literal">cd</tt> to the directory where you have extracted the vector
 layers and run the following commands.</li>
 </ol>
-<div class="highlight"><pre>cd Users\Ujaval\Downloads\bengaluru_india.osm2pgsql-shapefiles
+<div class="highlight"><pre><span></span>cd Users\Ujaval\Downloads\bengaluru_india.osm2pgsql-shapefiles
 
 ogrtindex -accept _different_schemas extent.shp osm.vrt
 
@@ -209,7 +214,7 @@ gdal_rasterize -burn 255 -ot Byte -tr 0.0001 0.0001 extent.shp bangalore.tif
 <li>Now we can convert the empty <tt class="docutils literal">bangalore.tif</tt> raster to a PDF - overlaying
 the vector layers from the <tt class="docutils literal">osm.vrt</tt> file.</li>
 </ol>
-<div class="highlight"><pre>gdal_translate -of PDF -a_srs EPSG:4326 bangalore.tif bangalore.pdf -co OGR_DATASOURCE=osm.vrt -co OGR_DISPLAY_FIELD=&quot;name&quot;
+<div class="highlight"><pre><span></span>gdal_translate -of PDF -a_srs EPSG:4326 bangalore.tif bangalore.pdf -co OGR_DATASOURCE=osm.vrt -co OGR_DISPLAY_FIELD=&quot;name&quot;
 </pre></div>
 <img alt="" class="align-center" src="/images/geopdf3.png" />
 <ol class="arabic simple" start="4">
@@ -311,6 +316,8 @@ PDF format file for exploring the format yourself.</p>
             </li>
 
 
+
+
     <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
       <ul class="list-group" id="links">
         <li class="list-group-item">
@@ -341,7 +348,7 @@ PDF format file for exploring the format yourself.</p>
       <hr>
       <div class="row">
          <div class="col-xs-10">&copy; 2015 Ujaval Gandhi
-            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
          <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>

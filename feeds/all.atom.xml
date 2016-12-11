@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Spatial Thoughts</title><link href="http://www.spatialthoughts.com/" rel="alternate"></link><link href="http://www.spatialthoughts.com/feeds/all.atom.xml" rel="self"></link><id>http://www.spatialthoughts.com/</id><updated>2015-12-06T00:00:00+05:30</updated><entry><title>Line Transact Surveys using OpenDataKit(ODK)</title><link href="http://www.spatialthoughts.com/blog/odk/odk-line-transact/" rel="alternate"></link><updated>2015-12-06T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-12-06:blog/odk/odk-line-transact/</id><summary type="html">&lt;p&gt;This weekend, I got an opportunity to volunteer with a non-profit called &lt;a class="reference external" href="http://www.junglescapes.org/"&gt;Junglescapes&lt;/a&gt;. We took a day trip to the Bandipur forest in
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Spatial Thoughts</title><link href="http://www.spatialthoughts.com/" rel="alternate"></link><link href="http://www.spatialthoughts.com/feeds/all.atom.xml" rel="self"></link><id>http://www.spatialthoughts.com/</id><updated>2015-12-06T00:00:00+05:30</updated><entry><title>Line Transact Surveys using OpenDataKit(ODK)</title><link href="http://www.spatialthoughts.com/blog/odk/odk-line-transact/" rel="alternate"></link><published>2015-12-06T00:00:00+05:30</published><updated>2015-12-06T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-12-06:blog/odk/odk-line-transact/</id><summary type="html">&lt;p&gt;This weekend, I got an opportunity to volunteer with a non-profit called &lt;a class="reference external" href="http://www.junglescapes.org/"&gt;Junglescapes&lt;/a&gt;. We took a day trip to the Bandipur forest in
 Karnataka where they have done extensive work in forest restoration. One of
 their success stories is working with the locals to remove invasive species
 such as Lantana from the forest. Junglescapes volunteers and locals carry out
@@ -64,7 +64,7 @@ interactive map visualization was a breeze. If you are an individual or a team
 who is doing field data collection, moving to ODK would help you reduce errors
 and collect accurate data without the hassles of data entry.&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Creating Geospatial PDFs with GDAL Tools</title><link href="http://www.spatialthoughts.com/blog/gis/geopdf-gdal/" rel="alternate"></link><updated>2015-10-27T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-10-27:blog/gis/geopdf-gdal/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/GeoPDF"&gt;GeoPDF&lt;/a&gt; is a unique data format that
+</summary></entry><entry><title>Creating Geospatial PDFs with GDAL Tools</title><link href="http://www.spatialthoughts.com/blog/gis/geopdf-gdal/" rel="alternate"></link><published>2015-10-27T00:00:00+05:30</published><updated>2015-10-27T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-10-27:blog/gis/geopdf-gdal/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/GeoPDF"&gt;GeoPDF&lt;/a&gt; is a unique data format that
 brings the portability of PDF to geospatial data. A GeoPDF document can present
 raster and vector data and preserve the georeference information. This can be a
 useful format for non-GIS folks to consume GIS data without needing
@@ -89,7 +89,7 @@ to enable support for PDF format.&lt;/p&gt;
 &lt;p&gt;Once installed, add the path to GDAL library to your
 &lt;tt class="docutils literal"&gt;.bash_profile&lt;/tt&gt; file to be able to use the commands easily from the terminal.
 Launch a Terminal and type in the following commands.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;echo &amp;#39;export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;echo &amp;#39;export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile
 source ~/.bash_profile
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -97,7 +97,7 @@ source ~/.bash_profile
 &lt;h3&gt;Linux&lt;/h3&gt;
 &lt;p&gt;Installation instructions will vary with the distribution. On Ubuntu, you can
 install the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;gdal-bin&lt;/span&gt;&lt;/tt&gt; package.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install gdal-bin
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install gdal-bin
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -106,7 +106,7 @@ install the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;gdal-bin&
 &lt;p&gt;If you already have GDAL installed, or just installed it, run the following
 command in a terminal to verify that your GDAL installation is working and has
 support for GeoPDF format.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;gdalinfo --formats | grep -i pdf
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gdalinfo --formats | grep -i pdf
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;If you see Geospatial PDF printed in the output - you are all set. If you do
 not get any output or get an error, your install is not correctly configured.&lt;/p&gt;
@@ -138,7 +138,7 @@ features where the 'name' field is empty. You can leave that out or modify
 to suit your dataset. Name this file &lt;tt class="docutils literal"&gt;osm.vrt&lt;/tt&gt; and save it on the same
 folder with your data.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&amp;lt;OGRVRTDataSource&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;OGRVRTDataSource&amp;gt;
     &amp;lt;OGRVRTLayer name=&amp;quot;roads&amp;quot;&amp;gt;
         &amp;lt;SrcDataSource&amp;gt;bengaluru_india_osm_line.shp&amp;lt;/SrcDataSource&amp;gt;
         &amp;lt;SrcLayer&amp;gt;bengaluru_india_osm_line&amp;lt;/SrcLayer&amp;gt;
@@ -167,7 +167,7 @@ resolution of the raster in degrees. You can tweak that to get the output
 size you need. &lt;tt class="docutils literal"&gt;cd&lt;/tt&gt; to the directory where you have extracted the vector
 layers and run the following commands.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;cd Users\Ujaval\Downloads\bengaluru_india.osm2pgsql-shapefiles
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd Users\Ujaval\Downloads\bengaluru_india.osm2pgsql-shapefiles
 
 ogrtindex -accept _different_schemas extent.shp osm.vrt
 
@@ -178,7 +178,7 @@ gdal_rasterize -burn 255 -ot Byte -tr 0.0001 0.0001 extent.shp bangalore.tif
 &lt;li&gt;Now we can convert the empty &lt;tt class="docutils literal"&gt;bangalore.tif&lt;/tt&gt; raster to a PDF - overlaying
 the vector layers from the &lt;tt class="docutils literal"&gt;osm.vrt&lt;/tt&gt; file.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;gdal_translate -of PDF -a_srs EPSG:4326 bangalore.tif bangalore.pdf -co OGR_DATASOURCE=osm.vrt -co OGR_DISPLAY_FIELD=&amp;quot;name&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gdal_translate -of PDF -a_srs EPSG:4326 bangalore.tif bangalore.pdf -co OGR_DATASOURCE=osm.vrt -co OGR_DISPLAY_FIELD=&amp;quot;name&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;img alt="" class="align-center" src="/images/geopdf3.png" /&gt;
 &lt;ol class="arabic simple" start="4"&gt;
@@ -199,12 +199,17 @@ Search also works across layers in the PDF.&lt;/li&gt;
 &lt;p&gt;You can download the sample &lt;a class="reference external" href="https://drive.google.com/open?id=0B0Xc7QoGul60eFRuTHVvUWRVZEE"&gt;bangalore.pdf&lt;/a&gt; Geospatial
 PDF format file for exploring the format yourself.&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Geo Data Processing with Mapshaper</title><link href="http://www.spatialthoughts.com/blog/gis/mapshaper-command-line/" rel="alternate"></link><updated>2015-10-24T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-10-24:blog/gis/mapshaper-command-line/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://mapshaper.org/"&gt;Mapshaper&lt;/a&gt; is a free and open-source tool that is
+</summary></entry><entry><title>Geo Data Processing with Mapshaper</title><link href="http://www.spatialthoughts.com/blog/gis/mapshaper-command-line/" rel="alternate"></link><published>2015-10-24T00:00:00+05:30</published><updated>2015-10-24T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-10-24:blog/gis/mapshaper-command-line/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://mapshaper.org/"&gt;Mapshaper&lt;/a&gt; is a free and open-source tool that is
 best known for fast and easy simplification. Other tools for simplification -
 like QGIS or ogr2ogr - do not preserve topology while simplifying.  This means
 you may get sliver polygons or missing intersections. Mapshaper performs
 topologically-aware simplification and gives you much more control on the
 process.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
+&lt;p class="last"&gt;Other popular open-source tools, PostGIS and GRASS can do
+topologically-aware simplifications as well.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;But Mapshaper is much more than a simplification tool. It is in active
 development and has many more data processing and editing capabilities now. It
 also has a command-line version of the tool which can be run from a terminal.
@@ -218,7 +223,7 @@ is enabled while going through the installer.&lt;/p&gt;
 &lt;img alt="" class="align-center" src="/images/mapshaper1.png" /&gt;
 &lt;p&gt;Once Node.js is installed, launch the Windows &lt;tt class="docutils literal"&gt;Command Prompt (cmd.exe)&lt;/tt&gt; and
 run the following command to install mapshaper.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;npm install -g mapshaper
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;npm install -g mapshaper
 &lt;/pre&gt;&lt;/div&gt;
 &lt;img alt="" class="align-center" src="/images/mapshaper2.png" /&gt;
 &lt;/div&gt;
@@ -243,13 +248,13 @@ Another useful option is &lt;tt class="docutils literal"&gt;&lt;span class="pre"
 polygons from the input will get deleted. Run the following command. Make
 sure you &lt;tt class="docutils literal"&gt;cd&lt;/tt&gt; to the directory where the data has been downloaded.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="note"&gt;
+&lt;div class="admonition note"&gt;
 &lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
 &lt;p class="last"&gt;The percentage value in the -simplify command can be a little misleading.
 The value indicates how many verticies to keep and not how many to remove.
 So a lower value would result in MORE simplification.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -o output.shp
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -o output.shp
 &lt;/pre&gt;&lt;/div&gt;
 &lt;img alt="" class="align-center" src="/images/mapshaper3.png" /&gt;
 &lt;ol class="arabic simple" start="2"&gt;
@@ -261,7 +266,7 @@ how a .csvt file is needed by QGIS). We can 'chain' the &lt;tt class="docutils l
 after the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-simplify&lt;/span&gt;&lt;/tt&gt; command to perform both the operation in a single
 command.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -join ca_tracts_pop.csv keys=GEOID,GEO.id2 field-types GEO.id2:str,D001:num -o output.shp
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -join ca_tracts_pop.csv keys=GEOID,GEO.id2 field-types GEO.id2:str,D001:num -o output.shp
 &lt;/pre&gt;&lt;/div&gt;
 &lt;img alt="" class="align-center" src="/images/mapshaper4.png" /&gt;
 &lt;ol class="arabic simple" start="3"&gt;
@@ -271,7 +276,7 @@ operation was many times faster than QGIS or GRASS. Let's add a
 also sum up the values of the &lt;tt class="docutils literal"&gt;D001&lt;/tt&gt; field to get the total population of
 the county from the sum of individual census tracts.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -join ca_tracts_pop.csv keys=GEOID,GEO.id2 field-types GEO.id2:str,D001:num -dissolve COUNTYFP sum-fields D001 -o output.shp
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -join ca_tracts_pop.csv keys=GEOID,GEO.id2 field-types GEO.id2:str,D001:num -dissolve COUNTYFP sum-fields D001 -o output.shp
 &lt;/pre&gt;&lt;/div&gt;
 &lt;img alt="" class="align-center" src="/images/mapshaper5.png" /&gt;
 &lt;ol class="arabic simple" start="4"&gt;
@@ -279,7 +284,7 @@ the county from the sum of individual census tracts.&lt;/li&gt;
 can write the output in these formats as well. Let's add a
 &lt;tt class="docutils literal"&gt;format=geojson&lt;/tt&gt; option to the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-o&lt;/span&gt;&lt;/tt&gt; command to write a geojson output.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -join ca_tracts_pop.csv keys=GEOID,GEO.id2 field-types GEO.id2:str,D001:num -dissolve COUNTYFP sum-fields D001 -o format=geojson output.geojson
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -join ca_tracts_pop.csv keys=GEOID,GEO.id2 field-types GEO.id2:str,D001:num -dissolve COUNTYFP sum-fields D001 -o format=geojson output.geojson
 &lt;/pre&gt;&lt;/div&gt;
 &lt;img alt="" class="align-center" src="/images/mapshaper6.png" /&gt;
 &lt;ol class="arabic simple" start="5"&gt;
@@ -292,7 +297,7 @@ the output shapes and their properties.&lt;/li&gt;
 hands. In just a single line of command and just a few seconds of computing, we
 did Simplification, Table Join, Dissolve and Format translation.&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Spatial Joins on the Command Line</title><link href="http://www.spatialthoughts.com/blog/gis/ogr-spatial-join/" rel="alternate"></link><updated>2015-07-19T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-07-19:blog/gis/ogr-spatial-join/</id><summary type="html">&lt;p&gt;GDAL and OGR libraries come with handy &lt;a class="reference external" href="http://www.gdal.org/ogr_utilities.html"&gt;command-line tools&lt;/a&gt;. These tools are quite powerful and
+</summary></entry><entry><title>Spatial Joins on the Command Line</title><link href="http://www.spatialthoughts.com/blog/gis/ogr-spatial-join/" rel="alternate"></link><published>2015-07-19T00:00:00+05:30</published><updated>2015-07-19T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-07-19:blog/gis/ogr-spatial-join/</id><summary type="html">&lt;p&gt;GDAL and OGR libraries come with handy &lt;a class="reference external" href="http://www.gdal.org/ogr_utilities.html"&gt;command-line tools&lt;/a&gt;. These tools are quite powerful and
 can save you a lot of effort if you know how to use them. Here I will show how
 to use the &lt;a class="reference external" href="http://www.gdal.org/ogrinfo.html"&gt;ogrinfo&lt;/a&gt; and &lt;a class="reference external" href="http://www.gdal.org/ogr2ogr.html"&gt;ogr2ogr&lt;/a&gt; tools to perform spatial joins. A single
 command can do complex operations on your spatial data and save you a lot of
@@ -318,7 +323,7 @@ inputs and pass them to the command-line tool as layers of a single input.&lt;/p
 &lt;li&gt;Unzip the input shapefiles in a single folder on your drive. Create a file
 named &lt;tt class="docutils literal"&gt;input.vrt&lt;/tt&gt; in the same folder with the following content.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&amp;lt;OGRVRTDataSource&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;OGRVRTDataSource&amp;gt;
     &amp;lt;OGRVRTLayer name=&amp;quot;boroughs&amp;quot;&amp;gt;
         &amp;lt;SrcDataSource&amp;gt;nybb.shp&amp;lt;/SrcDataSource&amp;gt;
         &amp;lt;SrcLayer&amp;gt;nybb&amp;lt;/SrcLayer&amp;gt;
@@ -334,7 +339,7 @@ named &lt;tt class="docutils literal"&gt;input.vrt&lt;/tt&gt; in the same folder
 and the vrt file. Run the &lt;tt class="docutils literal"&gt;ogrinfo&lt;/tt&gt; command to check if the VRT file is
 correct.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;ogrinfo input.vrt
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ogrinfo input.vrt
 &lt;/pre&gt;&lt;/div&gt;
 &lt;img alt="" class="align-center" src="/images/ogr-spatial1.png" /&gt;
 &lt;ol class="arabic simple" start="3"&gt;
@@ -343,7 +348,7 @@ correct.&lt;/li&gt;
 boundary of a borough and use the &lt;tt class="docutils literal"&gt;SUM&lt;/tt&gt; function to find the total nursing
 home capacity of a borough. Run the following command.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;ogrinfo -sql &amp;quot;SELECT b.BoroName, sum(n.Capacity) as total_capacity from
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ogrinfo -sql &amp;quot;SELECT b.BoroName, sum(n.Capacity) as total_capacity from
 boroughs b, nursinghomes n WHERE ST_INTERSECTS(b.geometry, n.geometry) group
 by b.BoroName&amp;quot; -dialect SQLITE input.vrt
 &lt;/pre&gt;&lt;/div&gt;
@@ -357,7 +362,7 @@ out a shapefile from the resulting join. Note that we are adding a
 &lt;tt class="docutils literal"&gt;geometry&lt;/tt&gt; column in the SELECT statement which results in a spatial
 output. Run the following command:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;ogr2ogr -sql &amp;quot;SELECT n.Name, n.Capacity, n.geometry, b.BoroName from
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ogr2ogr -sql &amp;quot;SELECT n.Name, n.Capacity, n.geometry, b.BoroName from
 boroughs b, nursinghomes n WHERE ST_INTERSECTS(b.geometry, n.geometry)&amp;quot;
 -dialect SQLITE output.shp input.vrt
 &lt;/pre&gt;&lt;/div&gt;
@@ -367,11 +372,11 @@ boroughs b, nursinghomes n WHERE ST_INTERSECTS(b.geometry, n.geometry)&amp;quot;
 attributes joined from the intersecting borough. You can use &lt;tt class="docutils literal"&gt;ogrinfo&lt;/tt&gt;
 command to check that as well.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;ogrinfo -al output.shp
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ogrinfo -al output.shp
 &lt;/pre&gt;&lt;/div&gt;
 &lt;img alt="" class="align-center" src="/images/ogr-spatial4.png" /&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Implementing a Field Data collection app for APD</title><link href="http://www.spatialthoughts.com/blog/odk/opendatakit-for-apd/" rel="alternate"></link><updated>2015-04-29T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-04-29:blog/odk/opendatakit-for-apd/</id><summary type="html">&lt;p&gt;The &lt;a class="reference external" href="http://www.apd-india.org/"&gt;Association for People with Disability (APD)&lt;/a&gt;
+</summary></entry><entry><title>Implementing a Field Data collection app for APD</title><link href="http://www.spatialthoughts.com/blog/odk/opendatakit-for-apd/" rel="alternate"></link><published>2015-04-29T00:00:00+05:30</published><updated>2015-04-29T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-04-29:blog/odk/opendatakit-for-apd/</id><summary type="html">&lt;p&gt;The &lt;a class="reference external" href="http://www.apd-india.org/"&gt;Association for People with Disability (APD)&lt;/a&gt;
 is a non-profit organization based out of Bangalore, India. Their mission is to
 reach out and rehabilitate people with disability from the under privileged
 segment. Over the past year, I along with my colleagues have been volunteering
@@ -467,7 +472,7 @@ having access to the patient’s medical history in the field. OpenDataKit’s
 &lt;li&gt;Encoding the knowledge from the training manual to a mobile app.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Le Paper Globe</title><link href="http://www.spatialthoughts.com/blog/misc/le-paper-globe/" rel="alternate"></link><updated>2013-07-14T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2013-07-14:blog/misc/le-paper-globe/</id><summary type="html">&lt;p&gt;A long pending weekend project is done. Printed, cut and folded a sturdy globe
+</summary></entry><entry><title>Le Paper Globe</title><link href="http://www.spatialthoughts.com/blog/misc/le-paper-globe/" rel="alternate"></link><published>2013-07-14T00:00:00+05:30</published><updated>2013-07-14T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2013-07-14:blog/misc/le-paper-globe/</id><summary type="html">&lt;p&gt;A long pending weekend project is done. Printed, cut and folded a sturdy globe
 using the template from &lt;a class="reference external" href="http://joachimesque.com/globe/"&gt;Le Paper Globe&lt;/a&gt;.&lt;/p&gt;
 &lt;img alt="Completed globe." src="/images/le-paper-globe1.jpg" /&gt;
 &lt;p&gt;This is not only fun, but a good prop to learn more about Geography. I envision
@@ -484,7 +489,7 @@ it would make a fun do-it-yourself project with kids of all ages.&lt;/p&gt;
 &lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;img alt="more pictures" src="/images/le-paper-globe4.jpg" /&gt;
-</summary></entry><entry><title>Calculate distance between a pair of lat/lon coordinates</title><link href="http://www.spatialthoughts.com/blog/gis/calculate-distance-spreadsheet/" rel="alternate"></link><updated>2013-07-06T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2013-07-06:blog/gis/calculate-distance-spreadsheet/</id><summary type="html">&lt;p&gt;I recently had a need to calculate distance between a large number of
+</summary></entry><entry><title>Calculate distance between a pair of lat/lon coordinates</title><link href="http://www.spatialthoughts.com/blog/gis/calculate-distance-spreadsheet/" rel="alternate"></link><published>2013-07-06T00:00:00+05:30</published><updated>2013-07-06T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2013-07-06:blog/gis/calculate-distance-spreadsheet/</id><summary type="html">&lt;p&gt;I recently had a need to calculate distance between a large number of
 latitude/longitude coordinate pairs. There are many options available if you
 want to import these in a GIS and run analysis. But there is a simpler and much
 more accesible way if you aren't doing very high accuracy calculations.&lt;/p&gt;
@@ -496,7 +501,7 @@ functions.&lt;/p&gt;
 &lt;img alt="forumla to calculate distance." src="/images/calculate-distance-spreadsheet.png" /&gt;
 &lt;p&gt;You can give it a try. Just open &lt;a class="reference external" href="https://docs.google.com/spreadsheet/ccc?key=0AkXc7QoGul60dEc5Q01pTGNfa3N5YW5EWDNkOG9Ec3c&amp;amp;newcopy=true"&gt;this spreadsheet&lt;/a&gt;,
 make a copy it and play with it as you like.&lt;/p&gt;
-</summary></entry><entry><title>Notes from FOSS4G India - 2012</title><link href="http://www.spatialthoughts.com/blog/gis/foss4g-india-2012/" rel="alternate"></link><updated>2012-10-29T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2012-10-29:blog/gis/foss4g-india-2012/</id><summary type="html">&lt;p&gt;India’s first FOSS4G - India conference was organized on 25-26 October, 2012 at
+</summary></entry><entry><title>Notes from FOSS4G India - 2012</title><link href="http://www.spatialthoughts.com/blog/gis/foss4g-india-2012/" rel="alternate"></link><published>2012-10-29T00:00:00+05:30</published><updated>2012-10-29T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2012-10-29:blog/gis/foss4g-india-2012/</id><summary type="html">&lt;p&gt;India’s first FOSS4G - India conference was organized on 25-26 October, 2012 at
 Hyderabad. This was a surprisingly low-profile event and there was very little
 buzz about it on the internet. I learnt about it just in time to register and
 make it to the event. Here I am sharing some notes and impressions. (notes are
@@ -590,7 +595,7 @@ is mature but there are no mature solutions based on these that the
 governments can adopt without much risk.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Notes from Carotonama - 2012</title><link href="http://www.spatialthoughts.com/blog/gis/cartonama-2012/" rel="alternate"></link><updated>2012-10-28T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2012-10-28:blog/gis/cartonama-2012/</id><summary type="html">&lt;p&gt;I was at #cartonama conference in Bangalore on 23rd September. It was wonderful
+</summary></entry><entry><title>Notes from Carotonama - 2012</title><link href="http://www.spatialthoughts.com/blog/gis/cartonama-2012/" rel="alternate"></link><published>2012-10-28T00:00:00+05:30</published><updated>2012-10-28T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2012-10-28:blog/gis/cartonama-2012/</id><summary type="html">&lt;p&gt;I was at #cartonama conference in Bangalore on 23rd September. It was wonderful
 to be among geogeeks and see the energy and enthusiasm. Got to see some great
 demos and LBS apps from startups in India. Here's a run down from my notes and
 bookmarks.&lt;/p&gt;
@@ -638,7 +643,7 @@ spreadsheet data from the agengy in to GTFS feed.&lt;/li&gt;
 &lt;li&gt;Geohash: overview of the geohash system. Lots of discussion around what
 geohash is good for. &lt;a class="reference external" href="http://geohash.org/"&gt;http://geohash.org/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</summary></entry><entry><title>GIS Project Ideas for Thesis/ Dissertation/ Internship</title><link href="http://www.spatialthoughts.com/blog/gis/gis-project-ideas/" rel="alternate"></link><updated>2010-10-25T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2010-10-25:blog/gis/gis-project-ideas/</id><summary type="html">&lt;p&gt;Many students have asked me for ideas on what topic they should choose for
+</summary></entry><entry><title>GIS Project Ideas for Thesis/ Dissertation/ Internship</title><link href="http://www.spatialthoughts.com/blog/gis/gis-project-ideas/" rel="alternate"></link><published>2010-10-25T00:00:00+05:30</published><updated>2010-10-25T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2010-10-25:blog/gis/gis-project-ideas/</id><summary type="html">&lt;p&gt;Many students have asked me for ideas on what topic they should choose for
 their Thesis. I have debated this myself when I was a student. The ideal topic
 would be the one that allows you to dive into a topic deeply as well as give
 you some practical skills that will help you landing a job. Here are some

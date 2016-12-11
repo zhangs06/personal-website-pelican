@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"
->
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
     <title>Geo Data Processing with Mapshaper - Spatial Thoughts</title>
     <!-- Using the latest rendering mode for IE -->
@@ -34,6 +33,11 @@
 
         <link href="http://www.spatialthoughts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="Spatial Thoughts ATOM Feed"/>
+
+
+
+        <link href="http://www.spatialthoughts.com/feeds/gis.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Spatial Thoughts gis ATOM Feed"/>
 
 </head>
 <body>
@@ -69,7 +73,6 @@ Spatial Thoughts            </a>
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-
     <section id="content">
         <article>
             <header class="page-header">
@@ -92,6 +95,8 @@ Spatial Thoughts            </a>
 
 
 
+
+
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -101,6 +106,11 @@ like QGIS or ogr2ogr - do not preserve topology while simplifying.  This means
 you may get sliver polygons or missing intersections. Mapshaper performs
 topologically-aware simplification and gives you much more control on the
 process.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Other popular open-source tools, PostGIS and GRASS can do
+topologically-aware simplifications as well.</p>
+</div>
 <p>But Mapshaper is much more than a simplification tool. It is in active
 development and has many more data processing and editing capabilities now. It
 also has a command-line version of the tool which can be run from a terminal.
@@ -114,7 +124,7 @@ is enabled while going through the installer.</p>
 <img alt="" class="align-center" src="/images/mapshaper1.png" />
 <p>Once Node.js is installed, launch the Windows <tt class="docutils literal">Command Prompt (cmd.exe)</tt> and
 run the following command to install mapshaper.</p>
-<div class="highlight"><pre>npm install -g mapshaper
+<div class="highlight"><pre><span></span>npm install -g mapshaper
 </pre></div>
 <img alt="" class="align-center" src="/images/mapshaper2.png" />
 </div>
@@ -139,13 +149,13 @@ Another useful option is <tt class="docutils literal"><span class="pre">keep-sha
 polygons from the input will get deleted. Run the following command. Make
 sure you <tt class="docutils literal">cd</tt> to the directory where the data has been downloaded.</li>
 </ol>
-<div class="note">
+<div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The percentage value in the -simplify command can be a little misleading.
 The value indicates how many verticies to keep and not how many to remove.
 So a lower value would result in MORE simplification.</p>
 </div>
-<div class="highlight"><pre>mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -o output.shp
+<div class="highlight"><pre><span></span>mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -o output.shp
 </pre></div>
 <img alt="" class="align-center" src="/images/mapshaper3.png" />
 <ol class="arabic simple" start="2">
@@ -157,7 +167,7 @@ how a .csvt file is needed by QGIS). We can 'chain' the <tt class="docutils lite
 after the <tt class="docutils literal"><span class="pre">-simplify</span></tt> command to perform both the operation in a single
 command.</li>
 </ol>
-<div class="highlight"><pre>mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -join ca_tracts_pop.csv keys=GEOID,GEO.id2 field-types GEO.id2:str,D001:num -o output.shp
+<div class="highlight"><pre><span></span>mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -join ca_tracts_pop.csv keys=GEOID,GEO.id2 field-types GEO.id2:str,D001:num -o output.shp
 </pre></div>
 <img alt="" class="align-center" src="/images/mapshaper4.png" />
 <ol class="arabic simple" start="3">
@@ -167,7 +177,7 @@ operation was many times faster than QGIS or GRASS. Let's add a
 also sum up the values of the <tt class="docutils literal">D001</tt> field to get the total population of
 the county from the sum of individual census tracts.</li>
 </ol>
-<div class="highlight"><pre>mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -join ca_tracts_pop.csv keys=GEOID,GEO.id2 field-types GEO.id2:str,D001:num -dissolve COUNTYFP sum-fields D001 -o output.shp
+<div class="highlight"><pre><span></span>mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -join ca_tracts_pop.csv keys=GEOID,GEO.id2 field-types GEO.id2:str,D001:num -dissolve COUNTYFP sum-fields D001 -o output.shp
 </pre></div>
 <img alt="" class="align-center" src="/images/mapshaper5.png" />
 <ol class="arabic simple" start="4">
@@ -175,7 +185,7 @@ the county from the sum of individual census tracts.</li>
 can write the output in these formats as well. Let's add a
 <tt class="docutils literal">format=geojson</tt> option to the <tt class="docutils literal"><span class="pre">-o</span></tt> command to write a geojson output.</li>
 </ol>
-<div class="highlight"><pre>mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -join ca_tracts_pop.csv keys=GEOID,GEO.id2 field-types GEO.id2:str,D001:num -dissolve COUNTYFP sum-fields D001 -o format=geojson output.geojson
+<div class="highlight"><pre><span></span>mapshaper -i tl_2013_06_tract\tl_2013_06_tract.shp -simplify 20% keep-shapes -join ca_tracts_pop.csv keys=GEOID,GEO.id2 field-types GEO.id2:str,D001:num -dissolve COUNTYFP sum-fields D001 -o format=geojson output.geojson
 </pre></div>
 <img alt="" class="align-center" src="/images/mapshaper6.png" />
 <ol class="arabic simple" start="5">
@@ -269,6 +279,8 @@ did Simplification, Table Join, Dissolve and Format translation.</p>
             </li>
 
 
+
+
     <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
       <ul class="list-group" id="links">
         <li class="list-group-item">
@@ -299,7 +311,7 @@ did Simplification, Table Join, Dissolve and Format translation.</p>
       <hr>
       <div class="row">
          <div class="col-xs-10">&copy; 2015 Ujaval Gandhi
-            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
          <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
