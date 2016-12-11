@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>OpenAQ Workshop Notes - Spatial Thoughts</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="http://www.spatialthoughts.com/blog/conference/openaq-workshop-notes/">
+
+        <meta name="author" content="Ujaval Gandhi" />
+        <meta name="description" content="I recently attended the OpenAQ workshop in Delhi . The workshop’s goal was to bring tech, science and media folks working on air quality together and brainstorm how to use open data to tackle air pollution challenges. Below are my notes and links to materials presented during the workshop. Below ..." />
+
+        <meta property="og:site_name" content="Spatial Thoughts" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="OpenAQ Workshop Notes"/>
+        <meta property="og:url" content="http://www.spatialthoughts.com/blog/conference/openaq-workshop-notes/"/>
+        <meta property="og:description" content="I recently attended the OpenAQ workshop in Delhi . The workshop’s goal was to bring tech, science and media folks working on air quality together and brainstorm how to use open data to tackle air pollution challenges. Below are my notes and links to materials presented during the workshop. Below ..."/>
+        <meta property="article:published_time" content="2016-11-25" />
+            <meta property="article:section" content="conference" />
+            <meta property="article:author" content="Ujaval Gandhi" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://www.spatialthoughts.com/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://www.spatialthoughts.com/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://www.spatialthoughts.com/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.spatialthoughts.com/theme/css/style.css" type="text/css"/>
+
+        <link href="http://www.spatialthoughts.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Spatial Thoughts ATOM Feed"/>
+
+
+
+        <link href="http://www.spatialthoughts.com/feeds/conference.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Spatial Thoughts conference ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://www.spatialthoughts.com/" class="navbar-brand">
+Spatial Thoughts            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="/qgis">QGIS</a></li>
+                    <li><a href="/opendatakit">OpenDataKit</a></li>
+                    <li><a href="/websites">Websites</a></li>
+                    <li><a href="/blog">Blog</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://www.spatialthoughts.com/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://www.spatialthoughts.com/blog/conference/openaq-workshop-notes/"
+                       rel="bookmark"
+                       title="Permalink to OpenAQ Workshop Notes">
+                        OpenAQ Workshop Notes
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-11-25T00:00:00+05:30"> Fri 25 November 2016</time>
+    </span>
+
+
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>I recently attended the <a class="reference external" href="https://medium.com/&#64;openaq/the-next-openaq-workshop-is-in-delhi-apply-to-come-7622aa60e48e#.e8xvdj3rw">OpenAQ workshop</a>  in Delhi . The workshop’s goal was to bring tech, science and media folks working on air quality together and brainstorm how to use open data to tackle air pollution challenges. Below are my notes and links to materials presented during the workshop.</p>
+<p>Below are my notes and links to materials presented during the workshop.</p>
+<div class="section" id="openaq">
+<h2>OpenAQ</h2>
+<p><a class="reference external" href="https://openaq.org/">OpenAQ</a> is a platform and community that aggregates and shares open air quality data from around the world.</p>
+<p>OpenAQ was co-founded by <a class="reference external" href="https://www.linkedin.com/in/christahasenkopfa">Christa Hasenkopf</a> and <a class="reference external" href="https://www.linkedin.com/in/joeflasher">Joe Flasher</a>. Christa works full time on OpenAQ and Joe works part-time as the lead developer.</p>
+</div>
+<div class="section" id="notes">
+<h2>Notes</h2>
+<div class="section" id="day-1-november-24-2016">
+<h3>Day 1 - November 24, 2016</h3>
+<div class="section" id="id2">
+<h4><a class="reference external" href="https://www.dropbox.com/s/0dhwd9jhng18lmj/1_Welcome.pptx?dl=0">Welcome, Workshop Goals,  Group Introductions</a></h4>
+<p>Folks at my table</p>
+<ul class="simple">
+<li><a class="reference external" href="https://twitter.com/varun_jhaveri">Varun Jhaveri:</a> (IIC, University of Chicago)  Worked on <a class="reference external" href="https://www.timeout.com/chicago/blog/chicago-has-started-installing-sensors-that-will-monitor-the-city-082916">Chicago Sensor network</a>. On a project to install a similar network in Delhi</li>
+<li><a class="reference external" href="https://twitter.com/shijith">Shijith</a>: Data Journalist at WION news. Interested in using open data to report on aur quality issues in Delhi</li>
+<li><a class="reference external" href="https://in.linkedin.com/in/gangadharsulkunte">Gangadhar Sulkunte</a>: Entrepreneur interested in DIY sensors. Launched a helium balloon</li>
+<li><a class="reference external" href="http://www.urbanemissions.info/about">Nishad KA</a> : Research Associate at Urban Emissions. GIS-guy. Currently working on mapping of brick kilns to quantify their effect on air pollution. Uses Google Earth imagery to locate brick kilns.</li>
+<li><a class="reference external" href="https://in.linkedin.com/in/jaykannaiyan">Jay Kannaiyan</a>: Found of Smart Air Filters. Low cost DIY air purifiers. <a class="reference external" href="http://overdrive.in/features/jay-kannaiyans-ride-around-the-world-on-a-motorcycle/">Rode his motorcycle around the world</a>  for 3 years!</li>
+<li><a class="reference external" href="https://www.edf.org/people/richie-ahuja">Richie Ahuja</a>: India director at Environmental Defence Fund. Interested in community engagement around air quality</li>
+<li><a class="reference external" href="https://twitter.com/named_none">Ayush Goel</a>: iOS developer and open data enthusiast</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h4><a class="reference external" href="https://www.dropbox.com/s/d2k5qripf9dp61j/2_IntroducingOpenAQ_Delhi2016.pptx?dl=0">Introducing the OpenAQ Platform + Community</a></h4>
+<p>Speakers: Christa Hasenkopf and Joe Flasher, OpenAQ  - 30 minutes</p>
+<p>OpenAQ tagline: Fighting Air Inequality</p>
+<p>Slide 4: Air Quality vs. GDP. Outliers are Qatar Bahrain UAE (high GDP - high pollution)</p>
+<p>Slide 5: Research gap: Top 10 most polluted cities have published &lt;40 papers (I didn’t quite agree with the premise that more research results in better air quality)</p>
+<p>aqicn.org is the top aggregator. But can’t download data or programmatic access to historical data. That’s why openaq was started.</p>
+</div>
+<div class="section" id="id4">
+<h4><a class="reference external" href="https://www.dropbox.com/s/rw58c631o828cqm/4_Guttikunda%20-%20OpenAQ.pptx?dl=0">Air Quality Landscape in Delhi</a></h4>
+<p>Speaker: Sarath Guttikunda, Urban Emissions</p>
+<p>Need for more Epidemiology Studies to drive policy change. Health impact of air pollution at higher levels is not well understood.
+<a class="reference external" href="https://www.phfi.org/">Public Health Foundation of India (PHFI)</a> and <a class="reference external" href="http://www.sriramachandra.edu.in/university/research.php?did=41">Sri Ramachandra University</a> leading studies in India on impact of air pollution on health</p>
+<p>2 target audiences for AQ data. These 2 should never be mixed and always addressed separately</p>
+<ul class="simple">
+<li>Science &amp; Policy - numbers, coverage of pollutants</li>
+<li>Public Awareness - Air quality index, healthy/unhealthy - lose severity from science perspective</li>
+</ul>
+<p>There are 550 manual pollution measuring stations in India. They are manually measured and entered. Someone goes in daily, changes the filter, weights it and enters data manually. Large delay in publishing data - challenge for Journalists and reporting on old data is hard. Noone wants to know what happened a month ago. That’s why lack of media stories for cities other than Delhi even though the pollution levels are as bad.</p>
+<p>60 stations are continuous monitoring stations and publishing real time data on CPCB website.</p>
+<p>Sensors costs</p>
+<ul class="simple">
+<li>CPCB sensors costs ~ Rs 1 Crore (USD 150k). Measures all pollutants. Includes daily maintenance etc.</li>
+<li>US embassy sensors costs ~ Rs. 10 Lakh (USD 15k) but measures only PM2.5</li>
+<li>Low cost sensors range from Rs. 10k - 40k (USD 200 - 800) - measures only PM2.5 and PM10</li>
+</ul>
+<p>Has there been any concrete policy change based on more data?</p>
+<p>Urban Emissions <a class="reference external" href="http://www.urbanemissions.info/emissions-india-coal-fired-power-plants/">published a report</a> on health impact of coal power plants and lag in standards. <a class="reference external" href="http://pib.nic.in/newsite/PrintRelease.aspx?relid=133726">New stricter regulations</a> were adopted based on this report.</p>
+</div>
+<div class="section" id="india-air-quality">
+<h4>India Air Quality</h4>
+<p>Pallavi Pant, University of Mass - Amherst</p>
+<p>Runs the India Air Quality blog at <a class="reference external" href="https://indiaaq.wordpress.com/">https://indiaaq.wordpress.com/</a> and tweets at &#64;airqualityindia</p>
+</div>
+<div class="section" id="air-quality-in-rwanda">
+<h4>Air Quality in Rwanda</h4>
+<p>Langley Dewitt, MIT, Kigali</p>
+<p>Measure air quality in Rwanda using bike-taxi drivers carrying sensors</p>
+</div>
+<div class="section" id="lunch">
+<h4>Lunch</h4>
+<p>Met Barun Aggarwal from Breathe Easy who makes air purifiers. Person behind the <a class="reference external" href="http://www.business-standard.com/article/beyond-business/inside-new-delhi-s-healthiest-building-115121101134_1.html">Healthiest Building in India</a> - Paharpur Business Centre. Barun also runs <a class="reference external" href="http://www.careforair.org/">Care for Air</a> non-profit that was a partner for this workshop.</p>
+<p>What are some good low-cost air quality sensors one can buy?</p>
+<p><a class="reference external" href="http://originstech.com/products/laser-egg/">Laser Egg monitor</a> is the most popular. Namita (who was in the workshop) from <a class="reference external" href="http://www.airveda.com/">Airveda</a> produces one at Rs. 10k. Calibration is a challenge as it drifts over time. Their sensors have the ability to receive OTA calibration updates to account for this.</p>
+</div>
+<div class="section" id="building-on-top-of-open-data">
+<h4>Building on Top of - Open Data</h4>
+<p>Speakers: Joe Flasher, OpenAQ - 30 minutes</p>
+<p>OpenAQ system architecture. Runs on Amazon CLoud</p>
+<p>Big fan of Lambda functions. Reduces sysadmin work as no servers to be managed.</p>
+<p>Openaq-fetch</p>
+<p>Openaq-api</p>
+<p>After fetch, kick of aggregations and stored in elasticache</p>
+<p>Postgres data - 30M records</p>
+<p>Daily CSV dump on S3</p>
+</div>
+<div class="section" id="ropenaq">
+<h4>ROpenAQ</h4>
+<p>Maelle Salmon</p>
+<p>R package for openaq</p>
+</div>
+<div class="section" id="id5">
+<h4><a class="reference external" href="https://www.dropbox.com/s/xpr5yvcd961g57q/8_Amrit_Smokey-OpenAQ-Presentation.pdf?dl=0">Smokey - The Air Quality Chatbot</a></h4>
+<p>Amrit Sharma</p>
+<p>Chatbot for FB, Twitter. Based on OpenAQ API.</p>
+</div>
+</div>
+<div class="section" id="day-2-november-25-2016">
+<h3>Day 2 - November 25, 2016</h3>
+<div class="section" id="indian-open-data-association">
+<h4>Indian Open Data Association</h4>
+<p>Mrutyunjay Mishra (M2)</p>
+<p>Open Sandbox model - give open access to data and let developers play with it</p>
+<p><a class="reference external" href="http://openenvironment.indiaopendata.com/#/dashboard/">Open Environment Data Project</a> is a plotform to collect and disseminate open air quality data.</p>
+<p>Have developed a affordable Do-it-Yourself (DiY) personal air quality (Dust SPM 2.5 &amp; 10 micron) monitoring device called <a class="reference external" href="http://openenvironment.indiaopendata.com/#/airowl/">AirOwl</a>  - open hardware and software</p>
+<p>Also have an outdoor monitor called <a class="reference external" href="http://knowledge.indiaopendata.com/index.php/India_Open_Environment_Data_Project#a.29_Environment_Monitoring_Kits">EMK</a> which is aimed at replacing science-grade robust sensors. Brings down the cost from Rs 6 Cr (1M) to Rs. 3 Lakh (USD 50K). Deployed and tested at MIT-run <a class="reference external" href="http://www.kumbha.org/">Kumbhathon</a>.</p>
+</div>
+<div class="section" id="reporting-on-air-quality-at-hindustan-times">
+<h4>Reporting on Air Quality at Hindustan Times</h4>
+<p>Ravi Suhag and Piyush Aggarwal</p>
+<p>Putting in context: we breathe 11000 littres (3000 gallons) of air per day</p>
+<p>Developed air quality portal at <a class="reference external" href="http://airquality.hindustantimes.com/">http://airquality.hindustantimes.com/</a> using data from CPCB (Central Pollution Control Board) and IndiaSpend (<a class="reference external" href="http://breathe.indiaspend.org/">http://breathe.indiaspend.org/</a>)</p>
+<p>Pretty map visualization and historic data. Storytelling using data <a class="reference external" href="http://www.hindustantimes.com/static/pollution-india-five-charts">http://www.hindustantimes.com/static/pollution-india-five-charts</a>
+Developed their own scrapers and database since OpenAQ did not have historic data going back 5 years.</p>
+</div>
+<div class="section" id="id7">
+<h4><a class="reference external" href="http://www.careforair.org/">Care for Air</a></h4>
+<p>Jyoti Pande Lavakare and Barun Aggarwal</p>
+<p>Small un-funded non-profit.</p>
+<p>Advocacy in Schools - nudging kids to uses school buses instead of private cars. Why rich kids come in their own cars? So they can start late and reach home early. Disincentivize use of private cars by allowing buses to come in early and  start early. Car pickups need to come in early and go after school buses leave. 80% private car kids started using school buses.</p>
+<p>Awareness in kids by presentations. Everyone loved the quote <tt class="docutils literal">Don’t trust your senses, trust your sensors</tt></p>
+<p>Partnered with the organization called <a class="reference external" href="http://jodogyan.org/">Jodo Gyan</a> that works on alternate Maths education in schools.</p>
+<p>They had filed a petition with supreme court to ban sale of firecrackers whose <a class="reference external" href="http://indianexpress.com/article/india/india-news-india/sc-bans-sale-of-fire-crackers-in-delhi-ncr-4394657/">verdict</a> came in as the workshop was in session!</p>
+</div>
+<div class="section" id="id9">
+<h4><a class="reference external" href="http://www.airveda.com/">Airveda</a></h4>
+<p>Namita Gupta</p>
+<p>Started by a mom who was faced with an asthmatic kid and no solution on how best to deal with air pollution in Delhi. Better data on indoor vs outdoor pollution levels, variations throughout the day and seasons helped her restrict outdoor play-time for her daughter and buy air purifiers that work to improve the air quality. Significant improvement over a year in the health of the child.</p>
+<p>Developed low-cost sensor as well as outdoor weatherproof sensors</p>
+<p>Advocacy by putting large air quality display outside Secretariat building in Delhi and at popular locations where politicians visit</p>
+</div>
+<div class="section" id="id10">
+<h4><a class="reference external" href="http://changetheair.org/">Hawa Badlo (ChangeTheAir)</a></h4>
+<p>Nipun Arora</p>
+<p>Media organization working with OpenAQ data. Their mission is  <tt class="docutils literal">Humanizing the Data</tt></p>
+<p>Ran many campaigns to raise awareness about air quality. Funded by GAIL (Gas Authority of India Limited)
+School have started acknowledging that air quality is a concern. Interest in measuring and improving air quality</p>
+</div>
+</div>
+<div class="section" id="workshop-materials">
+<h3>Workshop Materials</h3>
+<ul class="simple">
+<li><a class="reference external" href="https://medium.com/&#64;openaq/delhi-openaq-workshop-info-materials-and-results-2bd74b88bee6#.3g0s0ebab">Presentations and Videos</a></li>
+<li><a class="reference external" href="https://medium.com/&#64;openaq/delhi-openaq-unconference-brainstorm-6b9baf61d4aa#.nzehbio86">Unconference Topics</a></li>
+<li><a class="reference external" href="https://docs.google.com/document/d/1W9q_lf68GOxP4ybmfgUcaS3CeDCx7Nm4A4CBI7NDD5E/edit">Next steps identified by participants</a></li>
+</ul>
+</div>
+</div>
+
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'spatialthoughts'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'openaq-workshop-notes';
+                var disqus_url = 'http://www.spatialthoughts.com/blog/conference/openaq-workshop-notes/';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://twitter.com/spatialthoughts"><i class="fa fa-twitter-square fa-lg"></i> twitter</a></li>
+                <li class="list-group-item"><a href="https://github.com/spatialthoughts"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+                <li class="list-group-item"><a href="https://google.com/+UjavalGandhi"><i class="fa fa-google-plus-square fa-lg"></i> Google+</a></li>
+              </ul>
+            </li>
+
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="http://www.spatialthoughts.com/blog/conference/openaq-workshop-notes/">
+                            OpenAQ Workshop Notes
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://www.spatialthoughts.com/blog/odk/odk-line-transact/">
+                            Line Transact Surveys using OpenDataKit(ODK)
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://www.spatialthoughts.com/blog/gis/geopdf-gdal/">
+                            Creating Geospatial PDFs with GDAL Tools
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://www.spatialthoughts.com/blog/gis/mapshaper-command-line/">
+                            Geo Data Processing with Mapshaper
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://www.spatialthoughts.com/blog/gis/ogr-spatial-join/">
+                            Spatial Joins on the Command Line
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://qgistutorials.com/" target="_blank">
+                QGIS Tutorials and Tips
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://www.gisinindia.com/" target="_blank">
+                GIS in India
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://www.gpsinindia.com/" target="_blank">
+                GPS in India
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Ujaval Gandhi
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://www.spatialthoughts.com/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://www.spatialthoughts.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://www.spatialthoughts.com/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'spatialthoughts'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics Universal -->
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-690672-12', '');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics Universal Code -->
+
+</body>
+</html>

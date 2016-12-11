@@ -1,5 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Spatial Thoughts</title><link href="http://www.spatialthoughts.com/" rel="alternate"></link><link href="http://www.spatialthoughts.com/feeds/all.atom.xml" rel="self"></link><id>http://www.spatialthoughts.com/</id><updated>2015-12-06T00:00:00+05:30</updated><entry><title>Line Transact Surveys using OpenDataKit(ODK)</title><link href="http://www.spatialthoughts.com/blog/odk/odk-line-transact/" rel="alternate"></link><published>2015-12-06T00:00:00+05:30</published><updated>2015-12-06T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-12-06:blog/odk/odk-line-transact/</id><summary type="html">&lt;p&gt;This weekend, I got an opportunity to volunteer with a non-profit called &lt;a class="reference external" href="http://www.junglescapes.org/"&gt;Junglescapes&lt;/a&gt;. We took a day trip to the Bandipur forest in
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Spatial Thoughts</title><link href="http://www.spatialthoughts.com/" rel="alternate"></link><link href="http://www.spatialthoughts.com/feeds/all.atom.xml" rel="self"></link><id>http://www.spatialthoughts.com/</id><updated>2016-11-25T00:00:00+05:30</updated><entry><title>OpenAQ Workshop Notes</title><link href="http://www.spatialthoughts.com/blog/conference/openaq-workshop-notes/" rel="alternate"></link><published>2016-11-25T00:00:00+05:30</published><updated>2016-11-25T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2016-11-25:blog/conference/openaq-workshop-notes/</id><summary type="html">&lt;p&gt;I recently attended the &lt;a class="reference external" href="https://medium.com/&amp;#64;openaq/the-next-openaq-workshop-is-in-delhi-apply-to-come-7622aa60e48e#.e8xvdj3rw"&gt;OpenAQ workshop&lt;/a&gt;  in Delhi . The workshop’s goal was to bring tech, science and media folks working on air quality together and brainstorm how to use open data to tackle air pollution challenges. Below are my notes and links to materials presented during the workshop.&lt;/p&gt;
+&lt;p&gt;Below are my notes and links to materials presented during the workshop.&lt;/p&gt;
+&lt;div class="section" id="openaq"&gt;
+&lt;h2&gt;OpenAQ&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://openaq.org/"&gt;OpenAQ&lt;/a&gt; is a platform and community that aggregates and shares open air quality data from around the world.&lt;/p&gt;
+&lt;p&gt;OpenAQ was co-founded by &lt;a class="reference external" href="https://www.linkedin.com/in/christahasenkopfa"&gt;Christa Hasenkopf&lt;/a&gt; and &lt;a class="reference external" href="https://www.linkedin.com/in/joeflasher"&gt;Joe Flasher&lt;/a&gt;. Christa works full time on OpenAQ and Joe works part-time as the lead developer.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="notes"&gt;
+&lt;h2&gt;Notes&lt;/h2&gt;
+&lt;div class="section" id="day-1-november-24-2016"&gt;
+&lt;h3&gt;Day 1 - November 24, 2016&lt;/h3&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h4&gt;&lt;a class="reference external" href="https://www.dropbox.com/s/0dhwd9jhng18lmj/1_Welcome.pptx?dl=0"&gt;Welcome, Workshop Goals,  Group Introductions&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Folks at my table&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://twitter.com/varun_jhaveri"&gt;Varun Jhaveri:&lt;/a&gt; (IIC, University of Chicago)  Worked on &lt;a class="reference external" href="https://www.timeout.com/chicago/blog/chicago-has-started-installing-sensors-that-will-monitor-the-city-082916"&gt;Chicago Sensor network&lt;/a&gt;. On a project to install a similar network in Delhi&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://twitter.com/shijith"&gt;Shijith&lt;/a&gt;: Data Journalist at WION news. Interested in using open data to report on aur quality issues in Delhi&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://in.linkedin.com/in/gangadharsulkunte"&gt;Gangadhar Sulkunte&lt;/a&gt;: Entrepreneur interested in DIY sensors. Launched a helium balloon&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.urbanemissions.info/about"&gt;Nishad KA&lt;/a&gt; : Research Associate at Urban Emissions. GIS-guy. Currently working on mapping of brick kilns to quantify their effect on air pollution. Uses Google Earth imagery to locate brick kilns.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://in.linkedin.com/in/jaykannaiyan"&gt;Jay Kannaiyan&lt;/a&gt;: Found of Smart Air Filters. Low cost DIY air purifiers. &lt;a class="reference external" href="http://overdrive.in/features/jay-kannaiyans-ride-around-the-world-on-a-motorcycle/"&gt;Rode his motorcycle around the world&lt;/a&gt;  for 3 years!&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.edf.org/people/richie-ahuja"&gt;Richie Ahuja&lt;/a&gt;: India director at Environmental Defence Fund. Interested in community engagement around air quality&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://twitter.com/named_none"&gt;Ayush Goel&lt;/a&gt;: iOS developer and open data enthusiast&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h4&gt;&lt;a class="reference external" href="https://www.dropbox.com/s/d2k5qripf9dp61j/2_IntroducingOpenAQ_Delhi2016.pptx?dl=0"&gt;Introducing the OpenAQ Platform + Community&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Speakers: Christa Hasenkopf and Joe Flasher, OpenAQ  - 30 minutes&lt;/p&gt;
+&lt;p&gt;OpenAQ tagline: Fighting Air Inequality&lt;/p&gt;
+&lt;p&gt;Slide 4: Air Quality vs. GDP. Outliers are Qatar Bahrain UAE (high GDP - high pollution)&lt;/p&gt;
+&lt;p&gt;Slide 5: Research gap: Top 10 most polluted cities have published &amp;lt;40 papers (I didn’t quite agree with the premise that more research results in better air quality)&lt;/p&gt;
+&lt;p&gt;aqicn.org is the top aggregator. But can’t download data or programmatic access to historical data. That’s why openaq was started.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h4&gt;&lt;a class="reference external" href="https://www.dropbox.com/s/rw58c631o828cqm/4_Guttikunda%20-%20OpenAQ.pptx?dl=0"&gt;Air Quality Landscape in Delhi&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Speaker: Sarath Guttikunda, Urban Emissions&lt;/p&gt;
+&lt;p&gt;Need for more Epidemiology Studies to drive policy change. Health impact of air pollution at higher levels is not well understood.
+&lt;a class="reference external" href="https://www.phfi.org/"&gt;Public Health Foundation of India (PHFI)&lt;/a&gt; and &lt;a class="reference external" href="http://www.sriramachandra.edu.in/university/research.php?did=41"&gt;Sri Ramachandra University&lt;/a&gt; leading studies in India on impact of air pollution on health&lt;/p&gt;
+&lt;p&gt;2 target audiences for AQ data. These 2 should never be mixed and always addressed separately&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Science &amp;amp; Policy - numbers, coverage of pollutants&lt;/li&gt;
+&lt;li&gt;Public Awareness - Air quality index, healthy/unhealthy - lose severity from science perspective&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are 550 manual pollution measuring stations in India. They are manually measured and entered. Someone goes in daily, changes the filter, weights it and enters data manually. Large delay in publishing data - challenge for Journalists and reporting on old data is hard. Noone wants to know what happened a month ago. That’s why lack of media stories for cities other than Delhi even though the pollution levels are as bad.&lt;/p&gt;
+&lt;p&gt;60 stations are continuous monitoring stations and publishing real time data on CPCB website.&lt;/p&gt;
+&lt;p&gt;Sensors costs&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;CPCB sensors costs ~ Rs 1 Crore (USD 150k). Measures all pollutants. Includes daily maintenance etc.&lt;/li&gt;
+&lt;li&gt;US embassy sensors costs ~ Rs. 10 Lakh (USD 15k) but measures only PM2.5&lt;/li&gt;
+&lt;li&gt;Low cost sensors range from Rs. 10k - 40k (USD 200 - 800) - measures only PM2.5 and PM10&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Has there been any concrete policy change based on more data?&lt;/p&gt;
+&lt;p&gt;Urban Emissions &lt;a class="reference external" href="http://www.urbanemissions.info/emissions-india-coal-fired-power-plants/"&gt;published a report&lt;/a&gt; on health impact of coal power plants and lag in standards. &lt;a class="reference external" href="http://pib.nic.in/newsite/PrintRelease.aspx?relid=133726"&gt;New stricter regulations&lt;/a&gt; were adopted based on this report.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="india-air-quality"&gt;
+&lt;h4&gt;India Air Quality&lt;/h4&gt;
+&lt;p&gt;Pallavi Pant, University of Mass - Amherst&lt;/p&gt;
+&lt;p&gt;Runs the India Air Quality blog at &lt;a class="reference external" href="https://indiaaq.wordpress.com/"&gt;https://indiaaq.wordpress.com/&lt;/a&gt; and tweets at &amp;#64;airqualityindia&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="air-quality-in-rwanda"&gt;
+&lt;h4&gt;Air Quality in Rwanda&lt;/h4&gt;
+&lt;p&gt;Langley Dewitt, MIT, Kigali&lt;/p&gt;
+&lt;p&gt;Measure air quality in Rwanda using bike-taxi drivers carrying sensors&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="lunch"&gt;
+&lt;h4&gt;Lunch&lt;/h4&gt;
+&lt;p&gt;Met Barun Aggarwal from Breathe Easy who makes air purifiers. Person behind the &lt;a class="reference external" href="http://www.business-standard.com/article/beyond-business/inside-new-delhi-s-healthiest-building-115121101134_1.html"&gt;Healthiest Building in India&lt;/a&gt; - Paharpur Business Centre. Barun also runs &lt;a class="reference external" href="http://www.careforair.org/"&gt;Care for Air&lt;/a&gt; non-profit that was a partner for this workshop.&lt;/p&gt;
+&lt;p&gt;What are some good low-cost air quality sensors one can buy?&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://originstech.com/products/laser-egg/"&gt;Laser Egg monitor&lt;/a&gt; is the most popular. Namita (who was in the workshop) from &lt;a class="reference external" href="http://www.airveda.com/"&gt;Airveda&lt;/a&gt; produces one at Rs. 10k. Calibration is a challenge as it drifts over time. Their sensors have the ability to receive OTA calibration updates to account for this.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="building-on-top-of-open-data"&gt;
+&lt;h4&gt;Building on Top of - Open Data&lt;/h4&gt;
+&lt;p&gt;Speakers: Joe Flasher, OpenAQ - 30 minutes&lt;/p&gt;
+&lt;p&gt;OpenAQ system architecture. Runs on Amazon CLoud&lt;/p&gt;
+&lt;p&gt;Big fan of Lambda functions. Reduces sysadmin work as no servers to be managed.&lt;/p&gt;
+&lt;p&gt;Openaq-fetch&lt;/p&gt;
+&lt;p&gt;Openaq-api&lt;/p&gt;
+&lt;p&gt;After fetch, kick of aggregations and stored in elasticache&lt;/p&gt;
+&lt;p&gt;Postgres data - 30M records&lt;/p&gt;
+&lt;p&gt;Daily CSV dump on S3&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ropenaq"&gt;
+&lt;h4&gt;ROpenAQ&lt;/h4&gt;
+&lt;p&gt;Maelle Salmon&lt;/p&gt;
+&lt;p&gt;R package for openaq&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h4&gt;&lt;a class="reference external" href="https://www.dropbox.com/s/xpr5yvcd961g57q/8_Amrit_Smokey-OpenAQ-Presentation.pdf?dl=0"&gt;Smokey - The Air Quality Chatbot&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Amrit Sharma&lt;/p&gt;
+&lt;p&gt;Chatbot for FB, Twitter. Based on OpenAQ API.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="day-2-november-25-2016"&gt;
+&lt;h3&gt;Day 2 - November 25, 2016&lt;/h3&gt;
+&lt;div class="section" id="indian-open-data-association"&gt;
+&lt;h4&gt;Indian Open Data Association&lt;/h4&gt;
+&lt;p&gt;Mrutyunjay Mishra (M2)&lt;/p&gt;
+&lt;p&gt;Open Sandbox model - give open access to data and let developers play with it&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://openenvironment.indiaopendata.com/#/dashboard/"&gt;Open Environment Data Project&lt;/a&gt; is a plotform to collect and disseminate open air quality data.&lt;/p&gt;
+&lt;p&gt;Have developed a affordable Do-it-Yourself (DiY) personal air quality (Dust SPM 2.5 &amp;amp; 10 micron) monitoring device called &lt;a class="reference external" href="http://openenvironment.indiaopendata.com/#/airowl/"&gt;AirOwl&lt;/a&gt;  - open hardware and software&lt;/p&gt;
+&lt;p&gt;Also have an outdoor monitor called &lt;a class="reference external" href="http://knowledge.indiaopendata.com/index.php/India_Open_Environment_Data_Project#a.29_Environment_Monitoring_Kits"&gt;EMK&lt;/a&gt; which is aimed at replacing science-grade robust sensors. Brings down the cost from Rs 6 Cr (1M) to Rs. 3 Lakh (USD 50K). Deployed and tested at MIT-run &lt;a class="reference external" href="http://www.kumbha.org/"&gt;Kumbhathon&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="reporting-on-air-quality-at-hindustan-times"&gt;
+&lt;h4&gt;Reporting on Air Quality at Hindustan Times&lt;/h4&gt;
+&lt;p&gt;Ravi Suhag and Piyush Aggarwal&lt;/p&gt;
+&lt;p&gt;Putting in context: we breathe 11000 littres (3000 gallons) of air per day&lt;/p&gt;
+&lt;p&gt;Developed air quality portal at &lt;a class="reference external" href="http://airquality.hindustantimes.com/"&gt;http://airquality.hindustantimes.com/&lt;/a&gt; using data from CPCB (Central Pollution Control Board) and IndiaSpend (&lt;a class="reference external" href="http://breathe.indiaspend.org/"&gt;http://breathe.indiaspend.org/&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Pretty map visualization and historic data. Storytelling using data &lt;a class="reference external" href="http://www.hindustantimes.com/static/pollution-india-five-charts"&gt;http://www.hindustantimes.com/static/pollution-india-five-charts&lt;/a&gt;
+Developed their own scrapers and database since OpenAQ did not have historic data going back 5 years.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id7"&gt;
+&lt;h4&gt;&lt;a class="reference external" href="http://www.careforair.org/"&gt;Care for Air&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Jyoti Pande Lavakare and Barun Aggarwal&lt;/p&gt;
+&lt;p&gt;Small un-funded non-profit.&lt;/p&gt;
+&lt;p&gt;Advocacy in Schools - nudging kids to uses school buses instead of private cars. Why rich kids come in their own cars? So they can start late and reach home early. Disincentivize use of private cars by allowing buses to come in early and  start early. Car pickups need to come in early and go after school buses leave. 80% private car kids started using school buses.&lt;/p&gt;
+&lt;p&gt;Awareness in kids by presentations. Everyone loved the quote &lt;tt class="docutils literal"&gt;Don’t trust your senses, trust your sensors&lt;/tt&gt;&lt;/p&gt;
+&lt;p&gt;Partnered with the organization called &lt;a class="reference external" href="http://jodogyan.org/"&gt;Jodo Gyan&lt;/a&gt; that works on alternate Maths education in schools.&lt;/p&gt;
+&lt;p&gt;They had filed a petition with supreme court to ban sale of firecrackers whose &lt;a class="reference external" href="http://indianexpress.com/article/india/india-news-india/sc-bans-sale-of-fire-crackers-in-delhi-ncr-4394657/"&gt;verdict&lt;/a&gt; came in as the workshop was in session!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id9"&gt;
+&lt;h4&gt;&lt;a class="reference external" href="http://www.airveda.com/"&gt;Airveda&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Namita Gupta&lt;/p&gt;
+&lt;p&gt;Started by a mom who was faced with an asthmatic kid and no solution on how best to deal with air pollution in Delhi. Better data on indoor vs outdoor pollution levels, variations throughout the day and seasons helped her restrict outdoor play-time for her daughter and buy air purifiers that work to improve the air quality. Significant improvement over a year in the health of the child.&lt;/p&gt;
+&lt;p&gt;Developed low-cost sensor as well as outdoor weatherproof sensors&lt;/p&gt;
+&lt;p&gt;Advocacy by putting large air quality display outside Secretariat building in Delhi and at popular locations where politicians visit&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id10"&gt;
+&lt;h4&gt;&lt;a class="reference external" href="http://changetheair.org/"&gt;Hawa Badlo (ChangeTheAir)&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Nipun Arora&lt;/p&gt;
+&lt;p&gt;Media organization working with OpenAQ data. Their mission is  &lt;tt class="docutils literal"&gt;Humanizing the Data&lt;/tt&gt;&lt;/p&gt;
+&lt;p&gt;Ran many campaigns to raise awareness about air quality. Funded by GAIL (Gas Authority of India Limited)
+School have started acknowledging that air quality is a concern. Interest in measuring and improving air quality&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="workshop-materials"&gt;
+&lt;h3&gt;Workshop Materials&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://medium.com/&amp;#64;openaq/delhi-openaq-workshop-info-materials-and-results-2bd74b88bee6#.3g0s0ebab"&gt;Presentations and Videos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://medium.com/&amp;#64;openaq/delhi-openaq-unconference-brainstorm-6b9baf61d4aa#.nzehbio86"&gt;Unconference Topics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.google.com/document/d/1W9q_lf68GOxP4ybmfgUcaS3CeDCx7Nm4A4CBI7NDD5E/edit"&gt;Next steps identified by participants&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Line Transact Surveys using OpenDataKit(ODK)</title><link href="http://www.spatialthoughts.com/blog/odk/odk-line-transact/" rel="alternate"></link><published>2015-12-06T00:00:00+05:30</published><updated>2015-12-06T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2015-12-06:blog/odk/odk-line-transact/</id><summary type="html">&lt;p&gt;This weekend, I got an opportunity to volunteer with a non-profit called &lt;a class="reference external" href="http://www.junglescapes.org/"&gt;Junglescapes&lt;/a&gt;. We took a day trip to the Bandipur forest in
 Karnataka where they have done extensive work in forest restoration. One of
 their success stories is working with the locals to remove invasive species
 such as Lantana from the forest. Junglescapes volunteers and locals carry out
@@ -501,7 +643,7 @@ functions.&lt;/p&gt;
 &lt;img alt="forumla to calculate distance." src="/images/calculate-distance-spreadsheet.png" /&gt;
 &lt;p&gt;You can give it a try. Just open &lt;a class="reference external" href="https://docs.google.com/spreadsheet/ccc?key=0AkXc7QoGul60dEc5Q01pTGNfa3N5YW5EWDNkOG9Ec3c&amp;amp;newcopy=true"&gt;this spreadsheet&lt;/a&gt;,
 make a copy it and play with it as you like.&lt;/p&gt;
-</summary></entry><entry><title>Notes from FOSS4G India - 2012</title><link href="http://www.spatialthoughts.com/blog/gis/foss4g-india-2012/" rel="alternate"></link><published>2012-10-29T00:00:00+05:30</published><updated>2012-10-29T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2012-10-29:blog/gis/foss4g-india-2012/</id><summary type="html">&lt;p&gt;India’s first FOSS4G - India conference was organized on 25-26 October, 2012 at
+</summary></entry><entry><title>Notes from FOSS4G India - 2012</title><link href="http://www.spatialthoughts.com/blog/conference/foss4g-india-2012/" rel="alternate"></link><published>2012-10-29T00:00:00+05:30</published><updated>2012-10-29T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2012-10-29:blog/conference/foss4g-india-2012/</id><summary type="html">&lt;p&gt;India’s first FOSS4G - India conference was organized on 25-26 October, 2012 at
 Hyderabad. This was a surprisingly low-profile event and there was very little
 buzz about it on the internet. I learnt about it just in time to register and
 make it to the event. Here I am sharing some notes and impressions. (notes are
@@ -595,7 +737,7 @@ is mature but there are no mature solutions based on these that the
 governments can adopt without much risk.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Notes from Carotonama - 2012</title><link href="http://www.spatialthoughts.com/blog/gis/cartonama-2012/" rel="alternate"></link><published>2012-10-28T00:00:00+05:30</published><updated>2012-10-28T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2012-10-28:blog/gis/cartonama-2012/</id><summary type="html">&lt;p&gt;I was at #cartonama conference in Bangalore on 23rd September. It was wonderful
+</summary></entry><entry><title>Notes from Carotonama - 2012</title><link href="http://www.spatialthoughts.com/blog/conference/cartonama-2012/" rel="alternate"></link><published>2012-10-28T00:00:00+05:30</published><updated>2012-10-28T00:00:00+05:30</updated><author><name>Ujaval Gandhi</name></author><id>tag:www.spatialthoughts.com,2012-10-28:blog/conference/cartonama-2012/</id><summary type="html">&lt;p&gt;I was at #cartonama conference in Bangalore on 23rd September. It was wonderful
 to be among geogeeks and see the energy and enthusiasm. Got to see some great
 demos and LBS apps from startups in India. Here's a run down from my notes and
 bookmarks.&lt;/p&gt;
