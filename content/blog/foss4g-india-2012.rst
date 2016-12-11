@@ -4,7 +4,7 @@ Notes from FOSS4G India - 2012
 :slug: foss4g-india-2012
 
 :date: 2012-10-29
-:category: gis
+:category: conference
 
 
 India’s first FOSS4G - India conference was organized on 25-26 October, 2012 at

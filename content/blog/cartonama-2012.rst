@@ -4,7 +4,7 @@ Notes from Carotonama - 2012
 :slug: cartonama-2012
 
 :date: 2012-10-28
-:category: gis
+:category: conference
 
 
 I was at #cartonama conference in Bangalore on 23rd September. It was wonderful
