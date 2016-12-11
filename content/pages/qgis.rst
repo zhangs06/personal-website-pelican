@@ -27,12 +27,12 @@ development.  [`Materials <http://spatialthoughts.com/qgis-power-user>`_]
 Maps Engine Connector for QGIS
 ------------------------------
 
-I am the author and the current maintainer of the `Google Maps Engine Connector
-<https://github.com/googlemaps/mapsengine-qgis-connector>`_ for QGIS.
+I am the author and the current maintainer of the (now deprecated)  `Google Maps Engine Connector
+<https://github.com/spatialthoughts/mapsengine-qgis-connector>`_ for QGIS.
 
 A short interview with an overview of the plugin.
 
 .. youtube:: QnSvfx6G2wE
     :width: 800
     :height: 500
-    :align: center
+   
