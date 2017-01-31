@@ -18,7 +18,7 @@ Web Mapping with QGIS
 *Indian Institute of Information Technology (IIIT) - Hyderabad, India*
 
 Taught a group of international participants at FOSS4g-Asia 2017 how to use
-qgis2web and QTiles plugin to do web mapping with QGIS.
+qgis2web and QTiles plugins to do web mapping with QGIS.
 
 .. image:: /images/qgis-foss4g-2017.jpg
    :alt: FOSS4G India 2015 workshop participants
