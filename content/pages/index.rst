@@ -14,5 +14,7 @@ industry in India.
 I am currently located in Bangalore, India and work as a Tech Lead/Manager for
 the aerial imagery team at Google.
 
+You may contact me at ujaval@spatialthoughts.com
+
 *Disclaimer: The views and opinions expressed here are mine alone and do not
 represent the views of my employer.*

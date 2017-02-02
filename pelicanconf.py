@@ -66,8 +66,7 @@ LINKS = (('QGIS Tutorials and Tips', 'http://qgistutorials.com/'),
 # Social widget
 SOCIAL = (('Twitter', 'http://twitter.com/spatialthoughts'),
      ('GitHub', 'https://github.com/spatialthoughts'),
-     ('Google+', 'https://google.com/+UjavalGandhi'),
-     ('Email', 'mailto:ujaval@spatialthoughts.com')
+     ('Google+', 'https://google.com/+UjavalGandhi')
      )
 
 DEFAULT_PAGINATION = False
